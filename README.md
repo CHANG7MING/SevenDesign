@@ -1,5 +1,5 @@
 <p align="center">
-  <strong>CA7-DESIGN</strong>
+  <strong>SEVEN-DESIGN</strong>
 </p>
 
 <p align="center">
