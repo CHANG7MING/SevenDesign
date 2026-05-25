@@ -1,0 +1,90 @@
+:root {
+  --background: #f7f7f5;
+  --foreground: #111827;
+  --card: #ffffff;
+  --card-foreground: #111827;
+  --popover: #ffffff;
+  --popover-foreground: #111827;
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: #3b82f6;
+
+  --primary: #10b981;
+  --primary-foreground: #05070a;
+  --primary-soft: rgba(16, 185, 129, 0.12);
+  --secondary: #f3f4f6;
+  --secondary-foreground: #111827;
+  --accent: #8b5cf6;
+  --accent-foreground: #ffffff;
+
+  --success: #22c55e;
+  --success-foreground: #03130a;
+  --warning: #f59e0b;
+  --warning-foreground: #1f1300;
+  --danger: #ef4444;
+  --danger-foreground: #ffffff;
+  --info: #3b82f6;
+  --info-foreground: #ffffff;
+
+  --hero-surface: rgba(255, 255, 255, 0.72);
+  --hero-glow: rgba(59, 130, 246, 0.1);
+  --sidebar-surface: #fcfcfd;
+  --code-surface: #f3f4f6;
+  --table-header: #f9fafb;
+  --table-row-hover: rgba(17, 24, 39, 0.04);
+  --spotlight-border: rgba(17, 24, 39, 0.1);
+  --chart-grid: rgba(17, 24, 39, 0.08);
+
+  --font-display: "Space Grotesk", "Sora", "General Sans", sans-serif;
+  --font-sans: "Inter", "Geist", "Manrope", sans-serif;
+  --font-mono: "JetBrains Mono", "IBM Plex Mono", "Geist Mono", monospace;
+
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.16);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.18);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.24);
+  --shadow-glow-blue: 0 0 0 1px rgba(59, 130, 246, 0.2), 0 20px 60px rgba(59, 130, 246, 0.18);
+  --shadow-glow-emerald: 0 0 0 1px rgba(16, 185, 129, 0.2), 0 20px 60px rgba(16, 185, 129, 0.18);
+
+  --motion-fast: 120ms;
+  --motion-base: 220ms;
+  --motion-slow: 420ms;
+  --motion-hero: 900ms;
+  --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out: ease-out;
+}
+
+.dark {
+  --background: #05070a;
+  --foreground: #f9fafb;
+  --card: #0b1020;
+  --card-foreground: #f9fafb;
+  --popover: #111827;
+  --popover-foreground: #f9fafb;
+  --muted: #111827;
+  --muted-foreground: #d1d5db;
+  --border: #1f2937;
+  --input: #1f2937;
+  --ring: #3b82f6;
+
+  --secondary: #111827;
+  --secondary-foreground: #f9fafb;
+
+  --hero-surface: rgba(17, 24, 39, 0.72);
+  --hero-glow: rgba(59, 130, 246, 0.18);
+  --sidebar-surface: #0b1020;
+  --code-surface: #0a0f1c;
+  --table-header: #111827;
+  --table-row-hover: rgba(255, 255, 255, 0.04);
+  --spotlight-border: rgba(255, 255, 255, 0.12);
+  --chart-grid: rgba(255, 255, 255, 0.08);
+}

@@ -1,0 +1,14 @@
+.DS_Store
+node_modules
+.next
+dist
+build
+coverage
+.env
+.env.*
+*.log
+*.swp
+*.swo
+*.tmp
+/.idea
+/.vscode
