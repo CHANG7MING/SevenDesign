@@ -9,7 +9,7 @@
 - Hover behavior: active item highlight should be immediate and keyboard-synced
 - Focus behavior: search input and active option must remain unmistakable
 - Disabled behavior: unavailable actions should still explain themselves if shown
-- Motion behavior: `--motion-base` open/close, no theatrical transforms
+- Motion behavior: no open/close animation for keyboard invocation; selection and focus feedback must be immediate
 - Accessibility notes: support keyboard navigation, escape close, and semantic group labels
 
 ## Token Mapping

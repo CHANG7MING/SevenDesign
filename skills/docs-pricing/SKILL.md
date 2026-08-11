@@ -1,30 +1,38 @@
-# Docs Pricing Skill
+---
+name: docs-pricing
+description: Design, build, or review documentation sites, help centers, onboarding guides, changelogs, pricing pages, plan comparison, and conversion flows with SevenDesign. Use when reading comfort, discoverability, trust, plan comprehension, responsive comparison, and calm conversion design are the primary goals.
+---
 
-## Use When
+# Docs and Pricing
 
-- building docs-first sites
-- SaaS pricing pages
-- onboarding and help centers
+Use this skill with [`../design-core/SKILL.md`](../design-core/SKILL.md). Follow the core workflow, then apply these defaults.
 
-## Use With
+## Load
 
-- `SAAS_WARM` direction from [`DESIGN.md`](../../DESIGN.md)
-- [`brands/notion.md`](../../brands/notion.md)
-- [`brands/linear.md`](../../brands/linear.md)
-- [`archetypes/docs-system.md`](../../archetypes/docs-system.md)
-- [`archetypes/pricing-page.md`](../../archetypes/pricing-page.md)
+- the `SAAS_WARM` direction in [`../../DESIGN.md`](../../DESIGN.md)
+- [`../../archetypes/docs-system.md`](../../archetypes/docs-system.md) or [`../../archetypes/pricing-page.md`](../../archetypes/pricing-page.md)
+- [`../../components/pricing-card.md`](../../components/pricing-card.md) for pricing work
+- one dominant brand reference: Notion or Linear in [`../../brands/`](../../brands)
 
-## Parameter Defaults
+## Defaults
 
-- `VISUAL_DENSITY`: `medium`
-- `MOTION_INTENSITY`: `low`
-- `BRAND_WARMTH`: `warm`
-- `LAYOUT_VARIANCE`: `safe`
-- `ENTERPRISE_DENSITY`: `low`
+- density: medium for docs, low to medium for pricing
+- warmth: warm
+- layout variance: safe
+- motion: low
 
-## Rules
+## Product requirements
 
-- maximize reading comfort
-- pricing should be calm and trust-building
-- avoid overdesigned docs chrome
-- use accent sparingly and clearly
+- Optimize docs for navigation, search, readable measure, stable anchors, and copyable examples.
+- Keep version, platform, prerequisites, and next steps visible where they affect success.
+- Make pricing easy to compare without requiring hover, animation, or mental arithmetic.
+- State billing period, currency, limits, overages, eligibility, and feature differences explicitly.
+- Preserve comparison semantics on mobile; use grouped rows or plan selectors instead of shrinking tables into illegibility.
+- Use motion only to preserve context in disclosure and navigation.
+
+## Avoid
+
+- overdesigned documentation chrome
+- “most popular” styling that obscures objective comparison
+- hidden fees, ambiguous units, decorative checkmark walls, and forced annual-price framing
+- animated reading surfaces or scroll effects that disturb anchors

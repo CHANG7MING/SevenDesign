@@ -1,0 +1,4 @@
+interface:
+  display_name: "SevenDesign Core"
+  short_description: "Design, build, polish, and review product UI"
+  default_prompt: "Use $design-core to turn this product brief into a distinctive, accessible, production-ready interface."

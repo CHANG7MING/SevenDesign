@@ -1,30 +1,38 @@
-# Luxe Landing Skill
+---
+name: luxe-landing
+description: Design, build, or review premium launch pages, hardware reveals, automotive sites, luxury product marketing, and cinematic editorial landing experiences with SevenDesign. Use when art direction, typography, imagery, pacing, and restrained motion must create a high-value impression without sacrificing clarity, accessibility, or performance.
+---
 
-## Use When
+# Luxe Landing
 
-- building premium launch pages
-- hardware reveals
-- automotive or prestige product marketing
+Use this skill with [`../design-core/SKILL.md`](../design-core/SKILL.md). Follow the core workflow, then apply these defaults.
 
-## Use With
+## Load
 
-- `LUXE_PERFORMANCE` direction from [`DESIGN.md`](../../DESIGN.md)
-- [`brands/tesla.md`](../../brands/tesla.md)
-- [`brands/apple.md`](../../brands/apple.md)
-- [`archetypes/landing-hero.md`](../../archetypes/landing-hero.md)
-- [`archetypes/pricing-page.md`](../../archetypes/pricing-page.md)
+- the `LUXE_PERFORMANCE` direction in [`../../DESIGN.md`](../../DESIGN.md)
+- [`../../archetypes/landing-hero.md`](../../archetypes/landing-hero.md)
+- one dominant brand reference: Apple or Tesla in [`../../brands/`](../../brands)
+- [`../design-core/references/interaction-motion.md`](../design-core/references/interaction-motion.md) before implementing cinematic motion
 
-## Parameter Defaults
+## Defaults
 
-- `VISUAL_DENSITY`: `low`
-- `MOTION_INTENSITY`: `medium`
-- `BRAND_WARMTH`: `cold`
-- `LAYOUT_VARIANCE`: `bold`
-- `ENTERPRISE_DENSITY`: `low`
+- density: low
+- warmth: cool unless the product story requires warmth
+- layout variance: bold
+- motion: medium, concentrated in a few authored moments
 
-## Rules
+## Product requirements
 
-- use fewer stronger visual moves
-- preserve whitespace and silence
-- do not overload the page with cards
-- premium means confidence, not ornament
+- Establish one visual thesis and repeat it through image treatment, typography, spacing, and motion.
+- Use fewer, stronger sections with deliberate pacing and meaningful product proof.
+- Let imagery carry detail; keep text hierarchy concise and precise.
+- Make long-form motion optional, progressive, and non-blocking. Preserve a strong static composition before animation loads.
+- Keep calls to action, product facts, price, availability, and legal information accessible.
+- Budget media and effects so mobile and reduced-motion experiences remain premium.
+
+## Avoid
+
+- equating premium with blur, black backgrounds, giant type, or empty space alone
+- scroll-jacking, forced video, or animation that blocks content
+- generic card grids after a cinematic hero
+- copying another brand's signature composition instead of extracting principles

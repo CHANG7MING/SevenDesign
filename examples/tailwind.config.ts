@@ -108,6 +108,8 @@ const config: Config = {
       transitionTimingFunction: {
         standard: "var(--ease-standard)",
         out: "var(--ease-out)",
+        move: "var(--ease-move)",
+        drawer: "var(--ease-drawer)",
       },
       keyframes: {
         "fade-up": {

@@ -27,6 +27,22 @@ Use it as the quickest entry point when deciding what to apply to a new product 
 
 ## Skill Entry Points
 
+### Upstream craft layer
+
+- [`skills/emil-design-eng/SKILL.md`](./skills/emil-design-eng/SKILL.md) — primary UI craft and motion decisions
+- [`skills/apple-design/SKILL.md`](./skills/apple-design/SKILL.md) — fluid, gesture-driven, spring-based interaction
+- [`skills/animation-vocabulary/SKILL.md`](./skills/animation-vocabulary/SKILL.md) — precise motion terminology
+- [`skills/review-animations/SKILL.md`](./skills/review-animations/SKILL.md) — strict animation-only review
+
+See [`skills/UPSTREAM-SOURCE.md`](./skills/UPSTREAM-SOURCE.md) for provenance and update guidance.
+
+### Team orchestration layer
+
+- [`skills/team-mode/SKILL.md`](./skills/team-mode/SKILL.md) — upstream Team Mode routing and dispatch contract
+- [`skills/team-mode/references/seven-design-routing.md`](./skills/team-mode/references/seven-design-routing.md) — SevenDesign role-to-skill mapping and handoff protocol
+
+### SevenDesign context layer
+
 - Core: [`skills/design-core/SKILL.md`](./skills/design-core/SKILL.md)
 - AI product: [`skills/ai-native/SKILL.md`](./skills/ai-native/SKILL.md)
 - Devtool: [`skills/devtool-pro/SKILL.md`](./skills/devtool-pro/SKILL.md)

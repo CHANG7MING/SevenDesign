@@ -32,6 +32,11 @@ Run this checklist before considering a design output complete.
 - Does motion explain hierarchy or interaction?
 - Is motion restrained in dense product views?
 - Is there any animation that could be removed without losing meaning?
+- Is motion removed or nearly instant for keyboard-triggered and high-frequency actions?
+- Do anchored surfaces animate from their trigger instead of the center?
+- Can rapidly repeated or gesture-driven motion be interrupted without jumping?
+- Are movement and hover effects adapted for reduced-motion and touch input?
+- Are routine UI transitions under 300ms unless a concrete reason justifies more time?
 
 ## 6. Responsiveness
 
@@ -50,3 +55,16 @@ Run this checklist before considering a design output complete.
 - Could a frontend team build this with the provided tokens and examples?
 - Are the components realistic, not purely decorative?
 - If code was generated, does it align with [`examples/`](./examples) and [`implementation/`](./implementation)?
+- Was the runnable result inspected at desktop and mobile sizes?
+- Were focus, loading, empty, error, long-content, and overflow states exercised where relevant?
+
+## 9. Team handoff (when Team Mode is used)
+
+- Was the dispatch packet complete: `Outcome`, `Benefit`, `Sources`, `Scope`, `Checks`, `Stop when`, and `Return`?
+- Were unresolved product, visual, architecture, safety, and acceptance decisions kept in the main thread?
+- Does each mutable file or artifact have exactly one writer?
+- Was explicit role/model/effective-sandbox evidence available, or was the role treated as advisory?
+- Did the child return changed files, checks performed, blockers, and verification gaps?
+- Did the main thread inspect the actual diff, rendered result, and shared working tree before accepting it?
+- Did an independent Reviewer return a verdict for the concrete unresolved risk, without repeating passed checks?
+- If responsive or subjective visual judgment was required, was it owned by the main thread or backed by captured browser evidence?

@@ -393,8 +393,9 @@ Motion should feel like:
 
 ### 11.3 Easing
 
-- default: `cubic-bezier(0.22, 1, 0.36, 1)`
-- fast UI: `ease-out`
+- default and fast UI: `cubic-bezier(0.23, 1, 0.32, 1)`
+- on-screen movement: `cubic-bezier(0.77, 0, 0.175, 1)`
+- drawers: `cubic-bezier(0.32, 0.72, 0, 1)`
 - complex entrance: soft deceleration with no spring excess
 
 ### 11.4 Allowed Motion Patterns

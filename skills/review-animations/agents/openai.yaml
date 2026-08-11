@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Animations"
+  short_description: "Audit motion against a strict craft bar"
+  default_prompt: "Use $review-animations to review this animation code and return findings, fixes, and a verdict."

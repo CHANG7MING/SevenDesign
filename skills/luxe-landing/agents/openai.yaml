@@ -1,0 +1,4 @@
+interface:
+  display_name: "SevenDesign Luxe Landing"
+  short_description: "Craft restrained premium launch experiences"
+  default_prompt: "Use $luxe-landing to create a cinematic, accessible, and high-performance launch page."

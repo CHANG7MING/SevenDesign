@@ -1,0 +1,4 @@
+interface:
+  display_name: "Emil Design Engineering"
+  short_description: "Apply high-craft UI and motion decisions"
+  default_prompt: "Use $emil-design-eng to polish this interface with careful component, interaction, and animation decisions."

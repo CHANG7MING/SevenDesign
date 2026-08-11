@@ -1,0 +1,4 @@
+interface:
+  display_name: "SevenDesign AI Native"
+  short_description: "Craft trustworthy AI product experiences"
+  default_prompt: "Use $ai-native to design a clear, controllable AI product workflow for this brief."

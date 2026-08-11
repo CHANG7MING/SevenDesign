@@ -1,32 +1,38 @@
-# Devtool Pro Skill
+---
+name: devtool-pro
+description: Design, build, or review developer tools, infrastructure consoles, API products, observability interfaces, technical dashboards, and dense operational workflows with SevenDesign. Use when scan speed, keyboard efficiency, reliable data states, code or logs, and restrained high-density interaction matter more than marketing spectacle.
+---
 
-## Use When
+# Devtool Pro
 
-- building backend products
-- API platforms
-- infra consoles
-- dashboards for technical teams
+Use this skill with [`../design-core/SKILL.md`](../design-core/SKILL.md). Follow the core workflow, then apply these defaults.
 
-## Use With
+## Load
 
-- [`presets/DEVTOOL-PRO.md`](../../presets/DEVTOOL-PRO.md)
-- [`brands/vercel.md`](../../brands/vercel.md)
-- [`brands/supabase.md`](../../brands/supabase.md)
-- [`brands/linear.md`](../../brands/linear.md)
-- [`archetypes/devtool-dashboard.md`](../../archetypes/devtool-dashboard.md)
-- [`archetypes/docs-system.md`](../../archetypes/docs-system.md)
+- [`../../presets/DEVTOOL-PRO.md`](../../presets/DEVTOOL-PRO.md)
+- [`../../archetypes/devtool-dashboard.md`](../../archetypes/devtool-dashboard.md) or [`../../archetypes/docs-system.md`](../../archetypes/docs-system.md)
+- one dominant brand reference from Vercel, Supabase, or Linear in [`../../brands/`](../../brands)
+- [`../../components/data-table.md`](../../components/data-table.md) and [`../../components/command-palette.md`](../../components/command-palette.md) when relevant
 
-## Parameter Defaults
+## Defaults
 
-- `VISUAL_DENSITY`: `medium`
-- `MOTION_INTENSITY`: `low`
-- `BRAND_WARMTH`: `cold`
-- `LAYOUT_VARIANCE`: `balanced`
-- `ENTERPRISE_DENSITY`: `high`
+- density: medium to high
+- warmth: cool
+- layout variance: controlled
+- motion: low
 
-## Rules
+## Product requirements
 
-- prioritize scan speed and clarity
-- use motion only where it improves orientation
-- dense screens must still feel premium
-- do not let operational UIs drift into marketing theatrics
+- Optimize for scan speed, comparison, keyboard use, and state clarity.
+- Keep identifiers, timestamps, statuses, environments, and destructive scopes unambiguous.
+- Treat loading, empty, partial, degraded, stale, and permission-denied states as first-class.
+- Use progressive disclosure for advanced configuration; retain nearby context while drilling down.
+- Keep code, logs, tables, and charts readable without wrapping every datum in a card.
+- Remove animation from command palettes and other high-frequency keyboard actions. Use immediate selection and focus feedback.
+
+## Avoid
+
+- marketing-scale typography inside operational screens
+- low-information dashboards made from oversized metric cards
+- motion that delays navigation, filtering, or command execution
+- raw third-party component styling that breaks the shared token system

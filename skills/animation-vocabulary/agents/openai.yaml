@@ -1,0 +1,4 @@
+interface:
+  display_name: "Animation Vocabulary"
+  short_description: "Name motion precisely for better prompts"
+  default_prompt: "Use $animation-vocabulary to identify the precise terms for the motion effect I described."

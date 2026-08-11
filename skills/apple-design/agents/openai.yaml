@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apple Fluid Interface Design"
+  short_description: "Design fluid, physical, responsive interactions"
+  default_prompt: "Use $apple-design to make this gesture-driven interface feel direct, physical, and interruptible."

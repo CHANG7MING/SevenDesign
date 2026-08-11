@@ -18,9 +18,10 @@ You do not need to read every file.
 
 ### Option 1: Use it with AI right now
 
-1. Open [`quickstart/USE-WITH-AI.md`](./quickstart/USE-WITH-AI.md)
-2. Pick a prompt from [`prompt-packs/`](./prompt-packs)
-3. Paste it into your AI tool together with [`DESIGN.md`](./DESIGN.md)
+1. Start with [`skills/design-core/SKILL.md`](./skills/design-core/SKILL.md)
+2. Add [`skills/emil-design-eng/SKILL.md`](./skills/emil-design-eng/SKILL.md) for the default craft bar
+3. Add [`skills/apple-design/SKILL.md`](./skills/apple-design/SKILL.md) for fluid or gesture-driven UI, or [`skills/review-animations/SKILL.md`](./skills/review-animations/SKILL.md) for motion review
+4. Choose a SevenDesign category skill, preset, archetype, and prompt from [`prompt-packs/`](./prompt-packs)
 
 ### Option 2: Use it in a real frontend project
 
@@ -43,6 +44,8 @@ Open [`quickstart/CHOOSE-YOUR-STACK.md`](./quickstart/CHOOSE-YOUR-STACK.md)
 - AI prompts: [`prompt-packs/`](./prompt-packs)
 - Copyable code: [`examples/`](./examples)
 - Starter bundles: [`starter-kits/`](./starter-kits)
+- Upstream provenance: [`skills/UPSTREAM-SOURCE.md`](./skills/UPSTREAM-SOURCE.md)
+- Team orchestration: [`skills/team-mode/references/seven-design-routing.md`](./skills/team-mode/references/seven-design-routing.md)
 
 ## If You Only Have 5 Minutes
 

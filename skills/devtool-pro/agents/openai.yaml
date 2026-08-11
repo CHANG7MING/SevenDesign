@@ -1,0 +1,4 @@
+interface:
+  display_name: "SevenDesign Devtool Pro"
+  short_description: "Craft precise, efficient developer tools"
+  default_prompt: "Use $devtool-pro to design a dense, fast, production-ready developer tool interface."

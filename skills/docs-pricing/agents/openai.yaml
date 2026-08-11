@@ -1,0 +1,4 @@
+interface:
+  display_name: "SevenDesign Docs and Pricing"
+  short_description: "Craft readable docs and trusted pricing"
+  default_prompt: "Use $docs-pricing to design a clear documentation or pricing experience for this product."
