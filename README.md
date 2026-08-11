@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/readme/hero.svg" width="100%" alt="SevenDesign: a design operating system for agents and frontend teams" />
+  <img src="./assets/readme/hero.svg" width="100%" alt="SEVENDESIGN：面向智能体与前端团队的设计操作系统" />
 </p>
 
 <p align="center">
