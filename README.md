@@ -12,7 +12,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/status-actively%20shaping-171817?style=flat-square&labelColor=d8ff47&color=171817" alt="状态：持续完善中" />
   <img src="https://img.shields.io/badge/license-MIT-171817?style=flat-square&labelColor=f5f5f0&color=171817" alt="MIT 许可证" />
-  <img src="https://img.shields.io/badge/stack-Tailwind%20%C2%B7%20shadcn%20%C2%B7%20Radix-171817?style=flat-square&labelColor=b8c9ff&color=171817" alt="Tailwind、shadcn 和 Radix" />
+  <img src="https://img.shields.io/badge/reference%20stack-Tailwind%20%C2%B7%20shadcn%20%C2%B7%20Radix-171817?style=flat-square&labelColor=b8c9ff&color=171817" alt="参考技术栈：Tailwind、shadcn 和 Radix" />
 </p>
 
 SEVENDESIGN 是一套面向 AI 智能体与前端团队、以产品思维为核心的设计操作系统。
