@@ -30,7 +30,7 @@
     <text x="628" y="366" font-size="15" fill="#1d1d1b">真实胜过装饰</text>
   </g>
 
-  <text x="88" y="472" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei',sans-serif" font-size="22" font-weight="700" fill="#1d1d1b">从需求到界面</text>
+  <text x="88" y="472" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei',sans-serif" font-size="22" font-weight="700" fill="#1d1d1b">FROM BRIEF TO INTERFACE</text>
   <text x="88" y="508" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei',sans-serif" font-size="15" fill="#4d4a44">清晰探索，谨慎构建，诚实复审结果。</text>
   <path d="M88 585 H730" stroke="#1d1d1b" stroke-width="2" opacity=".28"/>
   <text x="88" y="627" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei',sans-serif" font-size="16" fill="#4d4a44">需求 / 证据 / 界面 / 验收</text>
