@@ -3,6 +3,11 @@
 </p>
 
 <p align="center">
+  <strong>SEVENDESIGN</strong><br>
+  面向 AI Agent 与前端团队的设计系统、界面构建与质量复审 Skill
+</p>
+
+<p align="center">
   <a href="./USAGE.md">使用指南</a> ·
   <a href="./skills/team-mode/SKILL.md">团队模式</a> ·
   <a href="./skills/apple-design/SKILL.md">Apple 工艺</a> ·
@@ -12,7 +17,8 @@
 <p align="center">
   <img src="https://img.shields.io/badge/status-actively%20shaping-171817?style=flat-square&labelColor=d8ff47&color=171817" alt="状态：持续完善中" />
   <img src="https://img.shields.io/badge/license-MIT-171817?style=flat-square&labelColor=f5f5f0&color=171817" alt="MIT 许可证" />
-  <img src="https://img.shields.io/badge/reference%20stack-Tailwind%20%C2%B7%20shadcn%20%C2%B7%20Radix-171817?style=flat-square&labelColor=b8c9ff&color=171817" alt="参考技术栈：Tailwind、shadcn 和 Radix" />
+  <img src="https://img.shields.io/badge/runtime-Codex%20Skills-171817?style=flat-square&labelColor=6d91bd&color=171817" alt="运行环境：Codex Skills" />
+  <img src="https://img.shields.io/badge/format-SKILL.md%20%C2%B7%20presets-171817?style=flat-square&labelColor=8069a5&color=171817" alt="形式：SKILL.md 与预设" />
 </p>
 
 SEVENDESIGN 是一套面向 AI 智能体与前端团队、以产品思维为核心的设计操作系统。
