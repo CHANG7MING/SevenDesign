@@ -1,0 +1,4 @@
+interface:
+  display_name: "SevenDesign 总入口"
+  short_description: "统一路由产品设计、前端构建、交互工艺与质量复审工作流"
+  default_prompt: "使用 $seven-design 为这个产品需求选择合适的设计、工艺、上下文与复审 Skill。"

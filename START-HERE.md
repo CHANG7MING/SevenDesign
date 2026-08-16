@@ -18,7 +18,7 @@ You do not need to read every file.
 
 ### Option 1: Use it with AI right now
 
-1. Start with [`skills/design-core/SKILL.md`](./skills/design-core/SKILL.md)
+1. Start with the unified router [`skills/seven-design/SKILL.md`](./skills/seven-design/SKILL.md)
 2. Add [`skills/emil-design-eng/SKILL.md`](./skills/emil-design-eng/SKILL.md) for the default craft bar
 3. Add [`skills/apple-design/SKILL.md`](./skills/apple-design/SKILL.md) for fluid or gesture-driven UI, or [`skills/review-animations/SKILL.md`](./skills/review-animations/SKILL.md) for motion review
 4. Choose a SevenDesign category skill, preset, archetype, and prompt from [`prompt-packs/`](./prompt-packs)
@@ -35,6 +35,7 @@ Open [`quickstart/CHOOSE-YOUR-STACK.md`](./quickstart/CHOOSE-YOUR-STACK.md)
 
 ## Best Entry Files
 
+- Unified Skill router: [`skills/seven-design/SKILL.md`](./skills/seven-design/SKILL.md)
 - Root system: [`DESIGN.md`](./DESIGN.md)
 - Token system: [`TOKENS.md`](./TOKENS.md)
 - Quick selector: [`quickstart/CHOOSE-YOUR-STACK.md`](./quickstart/CHOOSE-YOUR-STACK.md)

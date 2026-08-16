@@ -45,7 +45,7 @@ Use when:
 
 Flow:
 
-1. Invoke [`skills/design-core/SKILL.md`](./skills/design-core/SKILL.md) for the inspect → direct → build → verify loop
+1. Invoke the unified router [`skills/seven-design/SKILL.md`](./skills/seven-design/SKILL.md), then load [`skills/design-core/SKILL.md`](./skills/design-core/SKILL.md) for the inspect → direct → build → verify loop
 2. Add the relevant upstream craft skill from [`skills/emil-design-eng/`](./skills/emil-design-eng), [`skills/apple-design/`](./skills/apple-design), [`skills/animation-vocabulary/`](./skills/animation-vocabulary), or [`skills/review-animations/`](./skills/review-animations)
 3. Add one SevenDesign category skill from [`skills/`](./skills) when the product category matches
 4. Load only the preset, brand, archetype, component, and interaction references selected by those skills

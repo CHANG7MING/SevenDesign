@@ -8,6 +8,7 @@
 </p>
 
 <p align="center">
+  <a href="./skills/seven-design/SKILL.md">主入口</a> ·
   <a href="./USAGE.md">使用指南</a> ·
   <a href="./skills/team-mode/SKILL.md">团队模式</a> ·
   <a href="./skills/apple-design/SKILL.md">Apple 工艺</a> ·
@@ -25,11 +26,23 @@ SEVENDESIGN 是一套面向 AI 智能体与前端团队、以产品思维为核�
 
 它把松散的产品需求转化为明确的视觉方向、统一的界面系统和可复审的实现路径，并结合 Apple 风格的流畅交互，以及探索者 / 执行者 / 复审者的团队协作模型。
 
+## 安装与入口
+
+`skills/seven-design/SKILL.md` 是 SEVENDESIGN 的统一入口，负责按任务路由到核心、工艺、上下文和团队 Skill。现有 `skills/*/SKILL.md` 仍然可以独立安装。
+
+使用 Codex Skill 安装器时，选择总入口路径：
+
+```text
+--path skills/seven-design
+```
+
+需要完整套件时，在同一次安装中追加需要的路径，例如 `skills/design-core`、`skills/apple-design`、`skills/emil-design-eng` 和 `skills/team-mode`。只安装总入口也能工作，但仓库内的具体配套 Skill 需要另外安装后才能被加载。
+
 ## 从这里开始
 
 如果你只有五分钟：
 
-1. 先阅读 [`USAGE.md`](./USAGE.md)。
+1. 先阅读 [`skills/seven-design/SKILL.md`](./skills/seven-design/SKILL.md) 和 [`USAGE.md`](./USAGE.md)。
 2. 在 [`quickstart/CHOOSE-YOUR-STACK.md`](./quickstart/CHOOSE-YOUR-STACK.md) 中选择一条方向。
 3. 将 [`DESIGN.md`](./DESIGN.md)、[`TOKENS.md`](./TOKENS.md)、[`skills/design-core/SKILL.md`](./skills/design-core/SKILL.md) 与一个匹配的上下文技能交给智能体。
 4. 在宣布完成前，使用 [`PRE-FLIGHT-CHECKLIST.md`](./PRE-FLIGHT-CHECKLIST.md) 进行检查。

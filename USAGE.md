@@ -1,8 +1,24 @@
-# SevenDesign usage
+# SevenDesign 使用指南
 
-SevenDesign is a design operating system for AI agents and frontend teams. It combines a product design library with an explicit team protocol so exploration, implementation, and review stay separate.
+SevenDesign 是面向 AI 智能体与前端团队的设计操作系统。它将产品设计资料与明确的团队协议结合起来，让探索、实现和复审保持边界。
 
-## The shortest useful setup
+## 安装与主入口
+
+统一入口是 [`skills/seven-design/SKILL.md`](./skills/seven-design/SKILL.md)。使用 Codex Skill 安装器时，至少安装：
+
+```text
+--path skills/seven-design
+```
+
+要使用完整能力，再按任务追加子 Skill：
+
+```text
+--path skills/seven-design skills/design-core skills/apple-design skills/emil-design-eng skills/team-mode
+```
+
+`skills/design-core`、`skills/apple-design`、`skills/emil-design-eng` 等目录仍是独立 Skill，可以单独安装。总入口只负责路由，不会假设所有子 Skill 已经存在。
+
+## 最短可用配置
 
 For a new interface, provide the agent with:
 
