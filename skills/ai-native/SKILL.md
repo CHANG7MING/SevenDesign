@@ -31,9 +31,14 @@ Use this skill with [`../design-core/SKILL.md`](../design-core/SKILL.md). Follow
 - Design believable empty, partial, long-running, error, and rate-limit states.
 - Use cinematic motion only to explain an AI capability; do not animate routine prompt submission or keyboard-first actions.
 
+## React Bits fit
+
+Load [`../react-bits/SKILL.md`](../react-bits/SKILL.md) for a media stage, output reveal, streaming explanation, or showcase surface with a clear product job. Prefer `system` motion for workspaces and reserve `signature` motion for a deliberate marketing or result moment. Pair expressive motion with readable state text and a reduced-motion fallback.
+
 ## Avoid
 
 - glow as the only signal that a product uses AI
 - fake terminal output, meaningless token streams, and decorative reasoning traces
 - hiding uncertainty, provenance, cost, or destructive actions
 - chat-only layouts when the task needs structured artifacts or comparison
+- turning a workspace into a screensaver with continuous React Bits effects

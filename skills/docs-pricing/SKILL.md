@@ -30,6 +30,10 @@ Use this skill with [`../design-core/SKILL.md`](../design-core/SKILL.md). Follow
 - Preserve comparison semantics on mobile; use grouped rows or plan selectors instead of shrinking tables into illegibility.
 - Use motion only to preserve context in disclosure and navigation.
 
+## React Bits fit
+
+Load [`../react-bits/SKILL.md`](../react-bits/SKILL.md) for a focused hero, plan emphasis, progressive disclosure, or onboarding transition. Prefer `micro` or restrained `system` motion. Never make reading surfaces continuously move, and keep reduced motion equivalent in content, state, and hierarchy.
+
 ## Avoid
 
 - overdesigned documentation chrome

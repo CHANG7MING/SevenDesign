@@ -1,0 +1,4 @@
+interface:
+  display_name: "Motion Composition Review"
+  short_description: "Review product motion hierarchy and coherence"
+  default_prompt: "Use $motion-review to review this interface's motion composition and return prioritized findings."

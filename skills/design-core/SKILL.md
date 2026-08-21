@@ -22,8 +22,6 @@ Infer the mode from the request. Combine modes when needed.
 - **Polish**: improve hierarchy, spacing, typography, states, and motion without changing product intent.
 - **Review**: inspect a UI, screenshot, or codebase and return evidence-backed findings before proposing changes.
 
-Do not block on missing preferences when the product context supports a safe default. State consequential assumptions briefly.
-
 ## Workflow
 
 ### 1. Inspect before designing
@@ -55,14 +53,29 @@ Load only the relevant local material:
 
 Use references as ingredients, not as instructions to average multiple brands together. Select one dominant direction and at most one supporting influence.
 
-### 3. Build the information architecture first
+### 3. Route React Bits deliberately
+
+When a concrete public React Bits component is useful for an expressive reveal, media stage, state transition, focus treatment, or showcase, load [`../react-bits/SKILL.md`](../react-bits/SKILL.md).
+
+React Bits is an implementation source, not a replacement for product hierarchy or the upstream motion bar:
+
+- name the product job before choosing a component;
+- select the smallest public component and matching project variant;
+- map colors, type, spacing, surfaces, focus, and states to SevenDesign tokens;
+- choose `micro`, `system`, or `signature` motion explicitly;
+- define trigger, choreography, interruption, resting state, and reduced-motion fallback;
+- use [`../motion-review/SKILL.md`](../motion-review/SKILL.md) for product-level composition and [`../review-animations/SKILL.md`](../review-animations/SKILL.md) when animation code changes.
+
+If the source is not available in the current project, record the public installation path or missing dependency. Never claim that React Bits or Pro source has been installed when only a link or design reference is present.
+
+### 4. Build the information architecture first
 
 - Make the key task and next action obvious before adding polish.
 - Use real product structure and plausible content. Do not hide weak hierarchy behind gradients, glass, mock terminals, or generic cards.
 - Keep marketing surfaces and product interiors in the same visual DNA.
 - Prefer a few strong layout decisions over many decorative ones.
 
-### 4. Implement the system, not a screenshot
+### 5. Implement the system, not a screenshot
 
 - Use semantic tokens for color, type, spacing, radius, elevation, and motion.
 - Reuse existing primitives and component APIs.
@@ -71,14 +84,14 @@ Use references as ingredients, not as instructions to average multiple brands to
 - Use motion only for feedback, orientation, continuity, explanation, or preventing a jarring state change.
 - Never add dependencies unless the result materially requires them and the project does not already provide an equivalent.
 
-### 5. Verify at real sizes
+### 6. Verify at real sizes
 
 - Run the relevant build, typecheck, lint, and tests.
 - Inspect the rendered result at desktop and mobile widths when a runnable UI exists.
 - Exercise interactive states, overflow, long content, empty states, focus order, and reduced motion.
 - Fix visible regressions before declaring completion.
 
-### 6. Apply the quality gate
+### 7. Apply the quality gate
 
 Reject work that violates [`../../FORBIDDEN-PATTERNS.md`](../../FORBIDDEN-PATTERNS.md). Complete [`../../PRE-FLIGHT-CHECKLIST.md`](../../PRE-FLIGHT-CHECKLIST.md).
 

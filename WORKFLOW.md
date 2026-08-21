@@ -18,7 +18,8 @@ Flow:
 2. Pick a path in [`quickstart/`](./quickstart)
 3. Choose a starter kit in [`starter-kits/`](./starter-kits)
 4. Use one prompt from [`prompt-packs/`](./prompt-packs)
-5. Validate with [`PRE-FLIGHT-CHECKLIST.md`](./PRE-FLIGHT-CHECKLIST.md)
+5. Add [`skills/react-bits/SKILL.md`](./skills/react-bits/SKILL.md) only when a public component has a named product job
+6. Validate with [`PRE-FLIGHT-CHECKLIST.md`](./PRE-FLIGHT-CHECKLIST.md)
 
 ### Mode 2: Frontend Implementation Workflow
 
@@ -34,7 +35,9 @@ Flow:
 2. Copy base files from [`examples/`](./examples)
 3. Apply rules from [`implementation/`](./implementation)
 4. Build pages using archetypes and components
-5. Validate with [`PRE-FLIGHT-CHECKLIST.md`](./PRE-FLIGHT-CHECKLIST.md)
+5. If using React Bits, select a public source and matching JS/TS plus CSS/Tailwind variant
+6. Record token substitutions, dependencies, responsive behavior, focus behavior, and reduced-motion fallback
+7. Validate with [`PRE-FLIGHT-CHECKLIST.md`](./PRE-FLIGHT-CHECKLIST.md)
 
 ### Mode 3: Skill Workflow
 
@@ -48,10 +51,13 @@ Flow:
 1. Invoke the unified router [`skills/seven-design/SKILL.md`](./skills/seven-design/SKILL.md), then load [`skills/design-core/SKILL.md`](./skills/design-core/SKILL.md) for the inspect → direct → build → verify loop
 2. Add the relevant upstream craft skill from [`skills/emil-design-eng/`](./skills/emil-design-eng), [`skills/apple-design/`](./skills/apple-design), [`skills/animation-vocabulary/`](./skills/animation-vocabulary), or [`skills/review-animations/`](./skills/review-animations)
 3. Add one SevenDesign category skill from [`skills/`](./skills) when the product category matches
-4. Load only the preset, brand, archetype, component, and interaction references selected by those skills
-5. Render and inspect the result when a runnable UI exists
-6. Review with [`skills/design-core/references/review-protocol.md`](./skills/design-core/references/review-protocol.md)
-7. Reject outputs that violate [`FORBIDDEN-PATTERNS.md`](./FORBIDDEN-PATTERNS.md)
+4. When a concrete public React Bits component is useful, load [`skills/react-bits/SKILL.md`](./skills/react-bits/SKILL.md) and keep its motion inside the selected `micro`, `system`, or `signature` tier
+5. Load only the preset, brand, archetype, component, and interaction references selected by those skills
+6. Render and inspect the result when a runnable UI exists
+7. Use [`skills/motion-review/SKILL.md`](./skills/motion-review/SKILL.md) for product-level motion composition, then [`skills/design-core/references/review-protocol.md`](./skills/design-core/references/review-protocol.md) and [`skills/review-animations/`](./skills/review-animations) for the applicable code-level review
+8. Reject outputs that violate [`FORBIDDEN-PATTERNS.md`](./FORBIDDEN-PATTERNS.md)
+
+React Bits is an implementation extension, not a replacement for product hierarchy, scenario constraints, or upstream motion standards. If the public source is not present locally, do not claim that it is installed; use the project's documented public installation path or record the missing dependency.
 
 ### Mode 4: Team Workflow
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "React Bits Integration"
+  short_description: "Integrate purposeful public React Bits motion"
+  default_prompt: "Use $react-bits to select and integrate a public React Bits component for this interface."

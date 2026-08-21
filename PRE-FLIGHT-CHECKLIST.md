@@ -17,8 +17,10 @@ Run this checklist before considering a design output complete.
 ## 3. Component Discipline
 
 - If multiple component systems are used, are they visually normalized?
-- Are `shadcn/ui`, `radix ui`, and any dense components aligned under one token system?
+- Are `shadcn/ui`, `radix ui`, React Bits, and any dense components aligned under one token system?
 - Are stock third-party styles removed or restyled?
+- If React Bits is used, is the public source, selected variant, dependency footprint, and token adaptation recorded?
+- Is the actual React Bits source available through the project's public dependency or installation path?
 
 ## 4. Product Quality
 
@@ -32,23 +34,30 @@ Run this checklist before considering a design output complete.
 - Does motion explain hierarchy or interaction?
 - Is motion restrained in dense product views?
 - Is there any animation that could be removed without losing meaning?
+- Does every animated surface define a job, trigger, choreography, interruption behavior, resting state, and reduced-motion fallback?
+- Are motion tiers explicit: `micro`, `system`, or `signature`?
+- Is there no more than one signature composition per viewport by default?
 - Is motion removed or nearly instant for keyboard-triggered and high-frequency actions?
 - Do anchored surfaces animate from their trigger instead of the center?
 - Can rapidly repeated or gesture-driven motion be interrupted without jumping?
 - Are movement and hover effects adapted for reduced-motion and touch input?
 - Are routine UI transitions under 300ms unless a concrete reason justifies more time?
+- Was [`skills/motion-review/SKILL.md`](./skills/motion-review/SKILL.md) run for product-level composition?
+- Was [`skills/review-animations/SKILL.md`](./skills/review-animations/SKILL.md) used when animation code was changed?
 
 ## 6. Responsiveness
 
 - Does the design preserve its tone on mobile?
 - Are touch targets usable?
 - Do tables, nav, and dialogs degrade gracefully on smaller screens?
+- Does the React Bits component preserve layout, focus, and content hierarchy at narrow widths?
 
 ## 7. Anti-Slop Check
 
 - Does the output violate anything in [`FORBIDDEN-PATTERNS.md`](./FORBIDDEN-PATTERNS.md)?
 - Does it look like a default template?
 - Does it rely on fake premium decoration instead of strong layout decisions?
+- Is any React Bits effect present only because it looks impressive, with no product job?
 
 ## 8. Buildability
 
@@ -57,6 +66,7 @@ Run this checklist before considering a design output complete.
 - If code was generated, does it align with [`examples/`](./examples) and [`implementation/`](./implementation)?
 - Was the runnable result inspected at desktop and mobile sizes?
 - Were focus, loading, empty, error, long-content, and overflow states exercised where relevant?
+- If Pro source or assets were unavailable, is the implementation honest about that boundary?
 
 ## 9. Team handoff (when Team Mode is used)
 

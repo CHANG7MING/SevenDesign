@@ -30,6 +30,10 @@ Use this skill with [`../design-core/SKILL.md`](../design-core/SKILL.md). Follow
 - Keep calls to action, product facts, price, availability, and legal information accessible.
 - Budget media and effects so mobile and reduced-motion experiences remain premium.
 
+## React Bits fit
+
+Load [`../react-bits/SKILL.md`](../react-bits/SKILL.md) for a hero media stage, product reveal, cursor/hover moment, or high-impact transition. Keep `signature` motion to the few moments that define the brand, provide a static and reduced-motion composition, and run [`../motion-review/SKILL.md`](../motion-review/SKILL.md) plus [`../review-animations/SKILL.md`](../review-animations/SKILL.md) before handoff.
+
 ## Avoid
 
 - equating premium with blur, black backgrounds, giant type, or empty space alone

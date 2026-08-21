@@ -8,12 +8,13 @@ Use it as the quickest entry point when deciding what to apply to a new product 
 
 ## Flow
 
-1. Start with [`START-HERE.md`](./START-HERE.md)
-2. Choose a guided path from [`quickstart/`](./quickstart)
+1. Start with the unified router [`skills/seven-design/SKILL.md`](./skills/seven-design/SKILL.md)
+2. Read [`START-HERE.md`](./START-HERE.md) and choose a guided path from [`quickstart/`](./quickstart)
 3. Pick a starter kit from [`starter-kits/`](./starter-kits)
 4. Use prompts from [`prompt-packs/`](./prompt-packs) or code from [`examples/`](./examples)
 5. Read [`DESIGN.md`](./DESIGN.md) and [`TOKENS.md`](./TOKENS.md) when you need deeper control
-6. Blend in presets, brands, archetypes, components, and implementation guides as needed
+6. Blend in one context skill, the optional [`react-bits`](./skills/react-bits/SKILL.md) extension, and only the references required by the task
+7. Run the product-level and code-level motion review that applies
 
 ## Fastest Entry Points
 
@@ -24,6 +25,7 @@ Use it as the quickest entry point when deciding what to apply to a new product 
 - Use as a workflow: [`WORKFLOW.md`](./WORKFLOW.md)
 - Check quality: [`PRE-FLIGHT-CHECKLIST.md`](./PRE-FLIGHT-CHECKLIST.md)
 - Apply guardrails: [`FORBIDDEN-PATTERNS.md`](./FORBIDDEN-PATTERNS.md)
+- Unified skill router: [`skills/seven-design/SKILL.md`](./skills/seven-design/SKILL.md)
 
 ## Skill Entry Points
 
@@ -48,6 +50,12 @@ See [`skills/UPSTREAM-SOURCE.md`](./skills/UPSTREAM-SOURCE.md) for provenance an
 - Devtool: [`skills/devtool-pro/SKILL.md`](./skills/devtool-pro/SKILL.md)
 - Docs + pricing: [`skills/docs-pricing/SKILL.md`](./skills/docs-pricing/SKILL.md)
 - Luxe landing: [`skills/luxe-landing/SKILL.md`](./skills/luxe-landing/SKILL.md)
+
+### React Bits extension layer
+
+- Public component and motion integration: [`skills/react-bits/SKILL.md`](./skills/react-bits/SKILL.md)
+- Product-level motion composition bridge: [`skills/motion-review/SKILL.md`](./skills/motion-review/SKILL.md)
+- Strict animation code review: [`skills/review-animations/SKILL.md`](./skills/review-animations/SKILL.md)
 
 ## Preset to Brand Mapping
 
@@ -171,3 +179,11 @@ Recommended next files:
 - `components/metric-card.md`
 - `components/sidebar-nav.md`
 - `components/hero-media-stage.md`
+
+## Motion System
+
+- Keep the existing visual dials and choose a motion tier per surface: `micro`, `system`, or `signature`.
+- Route public React Bits component sourcing through [`skills/react-bits/SKILL.md`](./skills/react-bits/SKILL.md).
+- Run [`skills/motion-review/SKILL.md`](./skills/motion-review/SKILL.md) for product-level composition before handoff.
+- Run [`skills/review-animations/SKILL.md`](./skills/review-animations/SKILL.md) when animation code changes.
+- Do not claim that React Bits runtime source or Pro material is present unless the project actually provides it.
