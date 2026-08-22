@@ -1,6 +1,6 @@
 # Showcase Next
 
-This is a runnable `Next.js + Tailwind` showcase built from the CA7-DESIGN library.
+This is a runnable `Next.js + Tailwind` showcase built from the SevenDesign library.
 
 ## Pages
 

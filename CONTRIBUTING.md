@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping improve CA7-DESIGN.
+Thanks for helping improve SevenDesign.
 
 ## Guidelines
 

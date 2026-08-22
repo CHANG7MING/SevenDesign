@@ -1,6 +1,6 @@
 # React Showcase
 
-This folder contains a standalone React demo page based on the CA7-DESIGN library.
+This folder contains a standalone React demo page based on the SevenDesign library.
 
 ## What it demonstrates
 

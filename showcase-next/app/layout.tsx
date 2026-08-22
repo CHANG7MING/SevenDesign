@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "CA7 Design Showcase",
-  description: "A Next.js showcase built from the CA7-DESIGN library.",
+  description: "A Next.js showcase built from the SevenDesign library.",
 };
 
 export default function RootLayout({

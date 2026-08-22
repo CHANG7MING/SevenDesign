@@ -219,6 +219,12 @@ SEVENDESIGN 完整引入了 [`attentiondotnet/emilkowalski_skills`](https://gith
 
 只有当一个新增内容能够教会他人可复用的决策时，才添加品牌、页面原型、组件配方、预设、实现示例或技能。请遵循 [`CONTRIBUTING.md`](./CONTRIBUTING.md)，并让新增材料保持产品特异性。
 
+### 上游贡献者
+
+感谢 [DavidHDev](https://github.com/DavidHDev) 创建并维护 [React Bits](https://github.com/DavidHDev/react-bits) 与 [Vue Bits](https://github.com/DavidHDev/vue-bits)。SevenDesign 使用这两个项目的公开组件、动效表达和 registry 作为 Component Intelligence 的上游参考与可选表达层来源。
+
+这是一项上游致谢，不代表 DavidHDev 是 SevenDesign 的直接维护者或本仓库的提交者。GitHub 右侧的 `Contributors` 列表由真实提交、Pull Request 或共同作者记录自动生成，不能通过 README 手动添加。
+
 ## 当前状态
 
 SevenDesign 现在可以直接作为：

@@ -3,7 +3,7 @@
 ## Prompt: Productized Design Framework Homepage
 
 ```text
-Use the attached CA7-DESIGN library as the system source of truth.
+Use the attached SevenDesign library as the system source of truth.
 
 Goal:
 Design a homepage for a public-facing design framework / agent skill product that feels like a real product, not just a repository landing page.
