@@ -1,0 +1,13 @@
+{
+  "upstream": "https://github.com/DavidHDev/react-bits",
+  "commit": "4e0e030193b563be6be33d928f77d0d01cefe237",
+  "snapshotDate": "2026-08-15",
+  "variants": [
+    "AnimatedList-TS-CSS",
+    "BlurText-TS-CSS",
+    "CountUp-JS-CSS",
+    "FlowingMenu-JS-CSS",
+    "SpotlightCard-JS-CSS",
+    "TiltedCard-JS-TW"
+  ]
+}

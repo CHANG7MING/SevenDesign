@@ -1,0 +1,4 @@
+interface:
+  display_name: "Find Animation Opportunities"
+  short_description: "Find high-value motion and reject decorative motion"
+  default_prompt: "Use $find-animation-opportunities to audit this interface for purposeful animation opportunities and rejected candidates."
