@@ -1,0 +1,805 @@
+{
+  "total": 20,
+  "passed": 20,
+  "score": 10.0,
+  "decisionScore": 10.0,
+  "qualityScore": null,
+  "qualityScoreStatus": "visual-qa-not-run",
+  "hardFailures": [],
+  "cases": [
+    {
+      "id": "admin-console-react",
+      "category": "admin-console",
+      "archetype": "admin-console",
+      "framework": "react",
+      "owners": {
+        "foundation": "shadcn",
+        "behavior": "radix",
+        "expression": "none"
+      },
+      "matches": {
+        "framework": true,
+        "archetype": true,
+        "ownership": {
+          "foundation": true,
+          "behavior": true,
+          "expression": true
+        },
+        "rejections": {
+          "React Bits": true,
+          "FlowingMenu": true
+        }
+      },
+      "scores": {
+        "productFramework": 15,
+        "ownership": 25.0,
+        "rationale": 15.0,
+        "contextProvenance": 10,
+        "visual": null,
+        "responsiveAccessibility": null,
+        "decisionScore": 10.0
+      },
+      "hardFailures": [],
+      "whyNot": [
+        "React Bits or Vue Bits as the default layer: expression competes with operations.",
+        "SpotlightCard: pointer focus does not improve record comparison.",
+        "FlowingMenu: navigation spectacle slows the admin workflow."
+      ]
+    },
+    {
+      "id": "admin-console-vue",
+      "category": "admin-console",
+      "archetype": "admin-console",
+      "framework": "vue",
+      "owners": {
+        "foundation": "host-system",
+        "behavior": "host-system",
+        "expression": "none"
+      },
+      "matches": {
+        "framework": true,
+        "archetype": true,
+        "ownership": {
+          "foundation": true,
+          "behavior": true,
+          "expression": true
+        },
+        "rejections": {
+          "React Bits": true,
+          "SpotlightCard": true
+        }
+      },
+      "scores": {
+        "productFramework": 15,
+        "ownership": 25.0,
+        "rationale": 15.0,
+        "contextProvenance": 10,
+        "visual": null,
+        "responsiveAccessibility": null,
+        "decisionScore": 10.0
+      },
+      "hardFailures": [],
+      "whyNot": [
+        "React Bits or Vue Bits as the default layer: expression competes with operations.",
+        "SpotlightCard: pointer focus does not improve record comparison.",
+        "FlowingMenu: navigation spectacle slows the admin workflow."
+      ]
+    },
+    {
+      "id": "ai-saas-hero-react",
+      "category": "ai-saas-hero",
+      "archetype": "ai-saas-hero",
+      "framework": "react",
+      "owners": {
+        "foundation": "shadcn",
+        "behavior": "radix",
+        "expression": "react-bits"
+      },
+      "matches": {
+        "framework": true,
+        "archetype": true,
+        "ownership": {
+          "foundation": true,
+          "behavior": true,
+          "expression": true
+        },
+        "rejections": {
+          "AnimatedList": true,
+          "FlowingMenu": true
+        }
+      },
+      "scores": {
+        "productFramework": 15,
+        "ownership": 25.0,
+        "rationale": 15.0,
+        "contextProvenance": 10,
+        "visual": null,
+        "responsiveAccessibility": null,
+        "decisionScore": 10.0
+      },
+      "hardFailures": [],
+      "whyNot": [
+        "Radix alone: it supplies behavior, not the styled hero surface.",
+        "AnimatedList: the hero promise is not a result list.",
+        "FlowingMenu: it would spend the viewport's signature budget on navigation spectacle."
+      ]
+    },
+    {
+      "id": "ai-saas-hero-vue",
+      "category": "ai-saas-hero",
+      "archetype": "ai-saas-hero",
+      "framework": "vue",
+      "owners": {
+        "foundation": "host-system",
+        "behavior": "host-system",
+        "expression": "vue-bits"
+      },
+      "matches": {
+        "framework": true,
+        "archetype": true,
+        "ownership": {
+          "foundation": true,
+          "behavior": true,
+          "expression": true
+        },
+        "rejections": {
+          "Radix": true,
+          "AnimatedList": true
+        }
+      },
+      "scores": {
+        "productFramework": 15,
+        "ownership": 25.0,
+        "rationale": 15.0,
+        "contextProvenance": 10,
+        "visual": null,
+        "responsiveAccessibility": null,
+        "decisionScore": 10.0
+      },
+      "hardFailures": [],
+      "whyNot": [
+        "Radix alone: it supplies behavior, not the styled hero surface.",
+        "AnimatedList: the hero promise is not a result list.",
+        "FlowingMenu: it would spend the viewport's signature budget on navigation spectacle."
+      ]
+    },
+    {
+      "id": "ai-workspace-react",
+      "category": "ai-workspace",
+      "archetype": "ai-workspace",
+      "framework": "react",
+      "owners": {
+        "foundation": "shadcn",
+        "behavior": "radix",
+        "expression": "none"
+      },
+      "matches": {
+        "framework": true,
+        "archetype": true,
+        "ownership": {
+          "foundation": true,
+          "behavior": true,
+          "expression": true
+        },
+        "rejections": {
+          "React Bits": true,
+          "FlowingMenu": true
+        }
+      },
+      "scores": {
+        "productFramework": 15,
+        "ownership": 25.0,
+        "rationale": 15.0,
+        "contextProvenance": 10,
+        "visual": null,
+        "responsiveAccessibility": null,
+        "decisionScore": 10.0
+      },
+      "hardFailures": [],
+      "whyNot": [
+        "React Bits or Vue Bits as the default layer: work completion and state clarity come first.",
+        "FlowingMenu: animated navigation competes with prompt and output flow.",
+        "SpotlightCard on every output: repeated pointer focus becomes visual noise."
+      ]
+    },
+    {
+      "id": "ai-workspace-vue",
+      "category": "ai-workspace",
+      "archetype": "ai-workspace",
+      "framework": "vue",
+      "owners": {
+        "foundation": "host-system",
+        "behavior": "host-system",
+        "expression": "none"
+      },
+      "matches": {
+        "framework": true,
+        "archetype": true,
+        "ownership": {
+          "foundation": true,
+          "behavior": true,
+          "expression": true
+        },
+        "rejections": {
+          "React Bits": true,
+          "SpotlightCard": true
+        }
+      },
+      "scores": {
+        "productFramework": 15,
+        "ownership": 25.0,
+        "rationale": 15.0,
+        "contextProvenance": 10,
+        "visual": null,
+        "responsiveAccessibility": null,
+        "decisionScore": 10.0
+      },
+      "hardFailures": [],
+      "whyNot": [
+        "React Bits or Vue Bits as the default layer: work completion and state clarity come first.",
+        "FlowingMenu: animated navigation competes with prompt and output flow.",
+        "SpotlightCard on every output: repeated pointer focus becomes visual noise."
+      ]
+    },
+    {
+      "id": "data-dashboard-react",
+      "category": "data-dashboard",
+      "archetype": "data-dashboard",
+      "framework": "react",
+      "owners": {
+        "foundation": "shadcn",
+        "behavior": "radix",
+        "expression": "none"
+      },
+      "matches": {
+        "framework": true,
+        "archetype": true,
+        "ownership": {
+          "foundation": true,
+          "behavior": true,
+          "expression": true
+        },
+        "rejections": {
+          "React Bits": true,
+          "TiltedCard": true
+        }
+      },
+      "scores": {
+        "productFramework": 15,
+        "ownership": 25.0,
+        "rationale": 15.0,
+        "contextProvenance": 10,
+        "visual": null,
+        "responsiveAccessibility": null,
+        "decisionScore": 10.0
+      },
+      "hardFailures": [],
+      "whyNot": [
+        "React Bits or Vue Bits as the default layer: reveal effects compete with scan speed.",
+        "TiltedCard: pointer depth does not help users compare records.",
+        "FlowingMenu: navigation spectacle slows a high-frequency workflow."
+      ]
+    },
+    {
+      "id": "data-dashboard-vue",
+      "category": "data-dashboard",
+      "archetype": "data-dashboard",
+      "framework": "vue",
+      "owners": {
+        "foundation": "host-system",
+        "behavior": "host-system",
+        "expression": "none"
+      },
+      "matches": {
+        "framework": true,
+        "archetype": true,
+        "ownership": {
+          "foundation": true,
+          "behavior": true,
+          "expression": true
+        },
+        "rejections": {
+          "React Bits": true,
+          "TiltedCard": true
+        }
+      },
+      "scores": {
+        "productFramework": 15,
+        "ownership": 25.0,
+        "rationale": 15.0,
+        "contextProvenance": 10,
+        "visual": null,
+        "responsiveAccessibility": null,
+        "decisionScore": 10.0
+      },
+      "hardFailures": [],
+      "whyNot": [
+        "React Bits or Vue Bits as the default layer: reveal effects compete with scan speed.",
+        "TiltedCard: pointer depth does not help users compare records.",
+        "FlowingMenu: navigation spectacle slows a high-frequency workflow."
+      ]
+    },
+    {
+      "id": "documentation-react",
+      "category": "documentation",
+      "archetype": "documentation",
+      "framework": "react",
+      "owners": {
+        "foundation": "shadcn",
+        "behavior": "radix",
+        "expression": "none"
+      },
+      "matches": {
+        "framework": true,
+        "archetype": true,
+        "ownership": {
+          "foundation": true,
+          "behavior": true,
+          "expression": true
+        },
+        "rejections": {
+          "Hero reveal": true,
+          "FlowingMenu": true
+        }
+      },
+      "scores": {
+        "productFramework": 15,
+        "ownership": 25.0,
+        "rationale": 15.0,
+        "contextProvenance": 10,
+        "visual": null,
+        "responsiveAccessibility": null,
+        "decisionScore": 10.0
+      },
+      "hardFailures": [],
+      "whyNot": [
+        "Hero reveal as the default: documentation value comes from findability and comprehension.",
+        "TiltedCard: perspective motion adds noise to code and reference content.",
+        "FlowingMenu: animated navigation harms fast wayfinding."
+      ]
+    },
+    {
+      "id": "documentation-vue",
+      "category": "documentation",
+      "archetype": "documentation",
+      "framework": "vue",
+      "owners": {
+        "foundation": "host-system",
+        "behavior": "host-system",
+        "expression": "none"
+      },
+      "matches": {
+        "framework": true,
+        "archetype": true,
+        "ownership": {
+          "foundation": true,
+          "behavior": true,
+          "expression": true
+        },
+        "rejections": {
+          "Hero reveal": true,
+          "TiltedCard": true
+        }
+      },
+      "scores": {
+        "productFramework": 15,
+        "ownership": 25.0,
+        "rationale": 15.0,
+        "contextProvenance": 10,
+        "visual": null,
+        "responsiveAccessibility": null,
+        "decisionScore": 10.0
+      },
+      "hardFailures": [],
+      "whyNot": [
+        "Hero reveal as the default: documentation value comes from findability and comprehension.",
+        "TiltedCard: perspective motion adds noise to code and reference content.",
+        "FlowingMenu: animated navigation harms fast wayfinding."
+      ]
+    },
+    {
+      "id": "editor-react",
+      "category": "editor",
+      "archetype": "editor",
+      "framework": "react",
+      "owners": {
+        "foundation": "host-system",
+        "behavior": "radix",
+        "expression": "none"
+      },
+      "matches": {
+        "framework": true,
+        "archetype": true,
+        "ownership": {
+          "foundation": true,
+          "behavior": true,
+          "expression": true
+        },
+        "rejections": {
+          "React Bits": true,
+          "TiltedCard": true
+        }
+      },
+      "scores": {
+        "productFramework": 15,
+        "ownership": 25.0,
+        "rationale": 15.0,
+        "contextProvenance": 10,
+        "visual": null,
+        "responsiveAccessibility": null,
+        "decisionScore": 10.0
+      },
+      "hardFailures": [],
+      "whyNot": [
+        "React Bits or Vue Bits as the default layer: reveal effects interrupt editing.",
+        "TiltedCard: pointer depth adds no value to authoring.",
+        "FlowingMenu: animated navigation competes with keyboard-driven work."
+      ]
+    },
+    {
+      "id": "editor-vue",
+      "category": "editor",
+      "archetype": "editor",
+      "framework": "vue",
+      "owners": {
+        "foundation": "host-system",
+        "behavior": "host-system",
+        "expression": "none"
+      },
+      "matches": {
+        "framework": true,
+        "archetype": true,
+        "ownership": {
+          "foundation": true,
+          "behavior": true,
+          "expression": true
+        },
+        "rejections": {
+          "React Bits": true,
+          "FlowingMenu": true
+        }
+      },
+      "scores": {
+        "productFramework": 15,
+        "ownership": 25.0,
+        "rationale": 15.0,
+        "contextProvenance": 10,
+        "visual": null,
+        "responsiveAccessibility": null,
+        "decisionScore": 10.0
+      },
+      "hardFailures": [],
+      "whyNot": [
+        "React Bits or Vue Bits as the default layer: reveal effects interrupt editing.",
+        "TiltedCard: pointer depth adds no value to authoring.",
+        "FlowingMenu: animated navigation competes with keyboard-driven work."
+      ]
+    },
+    {
+      "id": "landing-page-react",
+      "category": "landing-page",
+      "archetype": "landing-page",
+      "framework": "react",
+      "owners": {
+        "foundation": "shadcn",
+        "behavior": "radix",
+        "expression": "react-bits"
+      },
+      "matches": {
+        "framework": true,
+        "archetype": true,
+        "ownership": {
+          "foundation": true,
+          "behavior": true,
+          "expression": true
+        },
+        "rejections": {
+          "Dashboard": true,
+          "Multiple signature": true
+        }
+      },
+      "scores": {
+        "productFramework": 15,
+        "ownership": 25.0,
+        "rationale": 15.0,
+        "contextProvenance": 10,
+        "visual": null,
+        "responsiveAccessibility": null,
+        "decisionScore": 10.0
+      },
+      "hardFailures": [],
+      "whyNot": [
+        "Dashboard motion patterns: repeated metrics and filters do not belong in a sparse marketing surface.",
+        "Multiple signature effects: they compete with the product promise.",
+        "CountUp without a truthful proof metric: it becomes decorative."
+      ]
+    },
+    {
+      "id": "landing-page-vue",
+      "category": "landing-page",
+      "archetype": "landing-page",
+      "framework": "vue",
+      "owners": {
+        "foundation": "host-system",
+        "behavior": "host-system",
+        "expression": "vue-bits"
+      },
+      "matches": {
+        "framework": true,
+        "archetype": true,
+        "ownership": {
+          "foundation": true,
+          "behavior": true,
+          "expression": true
+        },
+        "rejections": {
+          "Dashboard": true,
+          "Multiple signature": true
+        }
+      },
+      "scores": {
+        "productFramework": 15,
+        "ownership": 25.0,
+        "rationale": 15.0,
+        "contextProvenance": 10,
+        "visual": null,
+        "responsiveAccessibility": null,
+        "decisionScore": 10.0
+      },
+      "hardFailures": [],
+      "whyNot": [
+        "Dashboard motion patterns: repeated metrics and filters do not belong in a sparse marketing surface.",
+        "Multiple signature effects: they compete with the product promise.",
+        "CountUp without a truthful proof metric: it becomes decorative."
+      ]
+    },
+    {
+      "id": "mobile-web-react",
+      "category": "mobile-web",
+      "archetype": "mobile-web",
+      "framework": "react",
+      "owners": {
+        "foundation": "host-system",
+        "behavior": "host-system",
+        "expression": "none"
+      },
+      "matches": {
+        "framework": true,
+        "archetype": true,
+        "ownership": {
+          "foundation": true,
+          "behavior": true,
+          "expression": true
+        },
+        "rejections": {
+          "TiltedCard": true,
+          "Always-on motion": true
+        }
+      },
+      "scores": {
+        "productFramework": 15,
+        "ownership": 25.0,
+        "rationale": 15.0,
+        "contextProvenance": 10,
+        "visual": null,
+        "responsiveAccessibility": null,
+        "decisionScore": 10.0
+      },
+      "hardFailures": [],
+      "whyNot": [
+        "Desktop-first showcase effects: they often break touch and content fit.",
+        "TiltedCard: pointer depth is not a reliable mobile interaction.",
+        "Always-on motion: it consumes attention and battery without a product job."
+      ]
+    },
+    {
+      "id": "mobile-web-vue",
+      "category": "mobile-web",
+      "archetype": "mobile-web",
+      "framework": "vue",
+      "owners": {
+        "foundation": "host-system",
+        "behavior": "host-system",
+        "expression": "none"
+      },
+      "matches": {
+        "framework": true,
+        "archetype": true,
+        "ownership": {
+          "foundation": true,
+          "behavior": true,
+          "expression": true
+        },
+        "rejections": {
+          "TiltedCard": true,
+          "Always-on motion": true
+        }
+      },
+      "scores": {
+        "productFramework": 15,
+        "ownership": 25.0,
+        "rationale": 15.0,
+        "contextProvenance": 10,
+        "visual": null,
+        "responsiveAccessibility": null,
+        "decisionScore": 10.0
+      },
+      "hardFailures": [],
+      "whyNot": [
+        "Desktop-first showcase effects: they often break touch and content fit.",
+        "TiltedCard: pointer depth is not a reliable mobile interaction.",
+        "Always-on motion: it consumes attention and battery without a product job."
+      ]
+    },
+    {
+      "id": "portfolio-react",
+      "category": "portfolio",
+      "archetype": "portfolio",
+      "framework": "react",
+      "owners": {
+        "foundation": "shadcn",
+        "behavior": "radix",
+        "expression": "react-bits"
+      },
+      "matches": {
+        "framework": true,
+        "archetype": true,
+        "ownership": {
+          "foundation": true,
+          "behavior": true,
+          "expression": true
+        },
+        "rejections": {
+          "Radix as the visual": true,
+          "CountUp": true
+        }
+      },
+      "scores": {
+        "productFramework": 15,
+        "ownership": 25.0,
+        "rationale": 15.0,
+        "contextProvenance": 10,
+        "visual": null,
+        "responsiveAccessibility": null,
+        "decisionScore": 10.0
+      },
+      "hardFailures": [],
+      "whyNot": [
+        "Radix as the visual layer: primitives need a product surface around them.",
+        "CountUp without a meaningful proof metric: it becomes decorative.",
+        "Multiple signature effects in one viewport: the work loses authorship and hierarchy."
+      ]
+    },
+    {
+      "id": "portfolio-vue",
+      "category": "portfolio",
+      "archetype": "portfolio",
+      "framework": "vue",
+      "owners": {
+        "foundation": "host-system",
+        "behavior": "host-system",
+        "expression": "vue-bits"
+      },
+      "matches": {
+        "framework": true,
+        "archetype": true,
+        "ownership": {
+          "foundation": true,
+          "behavior": true,
+          "expression": true
+        },
+        "rejections": {
+          "Radix as the visual": true,
+          "CountUp": true
+        }
+      },
+      "scores": {
+        "productFramework": 15,
+        "ownership": 25.0,
+        "rationale": 15.0,
+        "contextProvenance": 10,
+        "visual": null,
+        "responsiveAccessibility": null,
+        "decisionScore": 10.0
+      },
+      "hardFailures": [],
+      "whyNot": [
+        "Radix as the visual layer: primitives need a product surface around them.",
+        "CountUp without a meaningful proof metric: it becomes decorative.",
+        "Multiple signature effects in one viewport: the work loses authorship and hierarchy."
+      ]
+    },
+    {
+      "id": "pricing-react",
+      "category": "pricing",
+      "archetype": "pricing",
+      "framework": "react",
+      "owners": {
+        "foundation": "shadcn",
+        "behavior": "radix",
+        "expression": "none"
+      },
+      "matches": {
+        "framework": true,
+        "archetype": true,
+        "ownership": {
+          "foundation": true,
+          "behavior": true,
+          "expression": true
+        },
+        "rejections": {
+          "CountUp": true,
+          "TiltedCard": true
+        }
+      },
+      "scores": {
+        "productFramework": 15,
+        "ownership": 25.0,
+        "rationale": 15.0,
+        "contextProvenance": 10,
+        "visual": null,
+        "responsiveAccessibility": null,
+        "decisionScore": 10.0
+      },
+      "hardFailures": [],
+      "whyNot": [
+        "CountUp without a truthful price or usage transition: it can obscure the offer.",
+        "TiltedCard: perspective competes with plan comparison.",
+        "Multiple signature effects: conversion choices need stable scanning."
+      ]
+    },
+    {
+      "id": "pricing-vue",
+      "category": "pricing",
+      "archetype": "pricing",
+      "framework": "vue",
+      "owners": {
+        "foundation": "host-system",
+        "behavior": "host-system",
+        "expression": "none"
+      },
+      "matches": {
+        "framework": true,
+        "archetype": true,
+        "ownership": {
+          "foundation": true,
+          "behavior": true,
+          "expression": true
+        },
+        "rejections": {
+          "CountUp": true,
+          "TiltedCard": true
+        }
+      },
+      "scores": {
+        "productFramework": 15,
+        "ownership": 25.0,
+        "rationale": 15.0,
+        "contextProvenance": 10,
+        "visual": null,
+        "responsiveAccessibility": null,
+        "decisionScore": 10.0
+      },
+      "hardFailures": [],
+      "whyNot": [
+        "CountUp without a truthful price or usage transition: it can obscure the offer.",
+        "TiltedCard: perspective competes with plan comparison.",
+        "Multiple signature effects: conversion choices need stable scanning."
+      ]
+    }
+  ],
+  "dimensions": {
+    "productFramework": 15,
+    "ownership": 25,
+    "rationale": 15,
+    "visual": {
+      "weight": 25,
+      "status": "not-run"
+    },
+    "responsiveAccessibility": {
+      "weight": 10,
+      "status": "not-run"
+    },
+    "contextProvenance": 10
+  }
+}

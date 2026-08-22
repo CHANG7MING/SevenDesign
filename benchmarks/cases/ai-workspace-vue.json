@@ -1,0 +1,25 @@
+{
+  "id": "ai-workspace-vue",
+  "category": "ai-workspace",
+  "brief": {
+    "surface": "agent workspace",
+    "jobs": ["write a prompt", "inspect output", "recover from errors"],
+    "frequency": "high",
+    "interaction": "keyboard and touch",
+    "constraints": ["Vue host", "dense work surface", "no decorative effects"]
+  },
+  "framework": "vue",
+  "expected": {
+    "archetype": "ai-workspace",
+    "ownership": {
+      "foundation": "host-system",
+      "behavior": "host-system",
+      "expression": "none"
+    },
+    "rejectionKeywords": ["React Bits", "SpotlightCard"]
+  },
+  "budget": {
+    "maxRegistryResults": 8,
+    "fullCatalogsExcluded": true
+  }
+}

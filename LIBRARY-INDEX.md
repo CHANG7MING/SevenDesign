@@ -23,6 +23,9 @@ Use it as the quickest entry point when deciding what to apply to a new product 
 - Use with AI: [`quickstart/USE-WITH-AI.md`](./quickstart/USE-WITH-AI.md)
 - Use in a real project: [`quickstart/USE-IN-PROJECT.md`](./quickstart/USE-IN-PROJECT.md)
 - Use as a workflow: [`WORKFLOW.md`](./WORKFLOW.md)
+- Benchmark source decisions: [`benchmarks/README.md`](./benchmarks/README.md)
+- Visual QA loop: [`skills/visual-qa/SKILL.md`](./skills/visual-qa/SKILL.md)
+- Context resolver: [`skills/seven-design/scripts/resolve-context.py`](./skills/seven-design/scripts/resolve-context.py)
 - Check quality: [`PRE-FLIGHT-CHECKLIST.md`](./PRE-FLIGHT-CHECKLIST.md)
 - Apply guardrails: [`FORBIDDEN-PATTERNS.md`](./FORBIDDEN-PATTERNS.md)
 - Unified skill router: [`skills/seven-design/SKILL.md`](./skills/seven-design/SKILL.md)
@@ -56,6 +59,7 @@ See [`skills/UPSTREAM-SOURCE.md`](./skills/UPSTREAM-SOURCE.md) for provenance an
 - [`skills/component-intelligence/SKILL.md`](./skills/component-intelligence/SKILL.md) — source-neutral component decision layer
 - [`skills/component-intelligence/catalog/source-matrix.json`](./skills/component-intelligence/catalog/source-matrix.json) — compact cross-library ownership matrix
 - [`skills/component-intelligence/scripts/select-source.py`](./skills/component-intelligence/scripts/select-source.py) — low-context deterministic source selector
+- [`skills/seven-design/scripts/resolve-context.py`](./skills/seven-design/scripts/resolve-context.py) — minimal Skill / Reference / Catalog resolver
 - Public component and motion integration: [`skills/react-bits/SKILL.md`](./skills/react-bits/SKILL.md)
 - Intelligent component selection protocol: [`skills/react-bits/references/selection-protocol.md`](./skills/react-bits/references/selection-protocol.md)
 - React-default / Vue-secondary framework routing: [`skills/react-bits/references/framework-selection.md`](./skills/react-bits/references/framework-selection.md)
@@ -68,6 +72,7 @@ See [`skills/UPSTREAM-SOURCE.md`](./skills/UPSTREAM-SOURCE.md) for provenance an
 - Audit existing motion and write implementation plans: [`skills/improve-animations/SKILL.md`](./skills/improve-animations/SKILL.md)
 - Product-level motion composition bridge: [`skills/motion-review/SKILL.md`](./skills/motion-review/SKILL.md)
 - Strict animation code review: [`skills/review-animations/SKILL.md`](./skills/review-animations/SKILL.md)
+- Visual QA capture and evidence review: [`skills/visual-qa/SKILL.md`](./skills/visual-qa/SKILL.md)
 
 ## Preset to Brand Mapping
 
@@ -212,3 +217,9 @@ Recommended next files:
 - Run [`skills/motion-review/SKILL.md`](./skills/motion-review/SKILL.md) for product-level composition before handoff.
 - Run [`skills/review-animations/SKILL.md`](./skills/review-animations/SKILL.md) when animation code changes.
 - Do not claim that React Bits runtime source or Pro material is present unless the project actually provides it.
+
+## Quality Loop
+
+- Run [`benchmarks/run-benchmarks.py`](./benchmarks/run-benchmarks.py) after changing Component Intelligence or source matrices.
+- Use [`skills/visual-qa/SKILL.md`](./skills/visual-qa/SKILL.md) for runnable UI screenshot evidence.
+- Use [`skills/seven-design/scripts/resolve-context.py`](./skills/seven-design/scripts/resolve-context.py) to keep context proportional to the task.

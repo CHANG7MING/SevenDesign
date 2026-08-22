@@ -1,0 +1,25 @@
+{
+  "id": "pricing-vue",
+  "category": "pricing",
+  "brief": {
+    "surface": "plan comparison",
+    "jobs": ["compare plans", "select billing"],
+    "frequency": "low",
+    "interaction": "touch toggle and CTA",
+    "constraints": ["Vue host", "trustworthy comparison", "reduced motion"]
+  },
+  "framework": "vue",
+  "expected": {
+    "archetype": "pricing",
+    "ownership": {
+      "foundation": "host-system",
+      "behavior": "host-system",
+      "expression": "none"
+    },
+    "rejectionKeywords": ["CountUp", "TiltedCard"]
+  },
+  "budget": {
+    "maxRegistryResults": 8,
+    "fullCatalogsExcluded": true
+  }
+}

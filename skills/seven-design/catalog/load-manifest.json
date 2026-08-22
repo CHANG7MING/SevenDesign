@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "defaultFramework": "react",
+  "tiers": {
+    "core": [
+      "skills/seven-design/SKILL.md",
+      "DESIGN.md",
+      "TOKENS.md"
+    ],
+    "selection": [
+      "skills/component-intelligence/SKILL.md",
+      "skills/component-intelligence/catalog/source-matrix.json"
+    ],
+    "implementation": [
+      "selected component source",
+      "selected dependency notes",
+      "selected token references"
+    ],
+    "review": [
+      "changed implementation files",
+      "visual screenshots",
+      "selected review rubric"
+    ]
+  },
+  "globalExclusions": [
+    "skills/react-bits/catalog/registry.json",
+    "skills/react-bits/catalog/vue/registry.json",
+    "skills/react-bits/catalog/llms.txt",
+    "skills/react-bits/catalog/vue/llms.txt",
+    "unrelated scenario Skills",
+    "unselected component source"
+  ],
+  "routes": {
+    "ai-saas-hero": {
+      "density": "sparse",
+      "scenarioSkills": [],
+      "references": ["skills/react-bits/references/framework-selection.md"],
+      "bitsEligible": true
+    },
+    "data-dashboard": {
+      "density": "dense",
+      "scenarioSkills": ["skills/devtool-pro/SKILL.md"],
+      "references": [],
+      "bitsEligible": false
+    },
+    "landing-page": {
+      "density": "sparse",
+      "scenarioSkills": ["skills/luxe-landing/SKILL.md"],
+      "references": ["skills/react-bits/references/framework-selection.md"],
+      "bitsEligible": true
+    },
+    "editor": {
+      "density": "dense",
+      "scenarioSkills": [],
+      "references": [],
+      "bitsEligible": false
+    },
+    "admin-console": {
+      "density": "dense",
+      "scenarioSkills": ["skills/devtool-pro/SKILL.md"],
+      "references": [],
+      "bitsEligible": false
+    },
+    "portfolio": {
+      "density": "sparse",
+      "scenarioSkills": ["skills/apple-design/SKILL.md"],
+      "references": ["skills/react-bits/references/framework-selection.md"],
+      "bitsEligible": true
+    },
+    "mobile-web": {
+      "density": "standard",
+      "scenarioSkills": ["skills/apple-design/SKILL.md"],
+      "references": [],
+      "bitsEligible": false
+    },
+    "documentation": {
+      "density": "standard",
+      "scenarioSkills": ["skills/docs-pricing/SKILL.md"],
+      "references": [],
+      "bitsEligible": false
+    },
+    "pricing": {
+      "density": "standard",
+      "scenarioSkills": ["skills/docs-pricing/SKILL.md"],
+      "references": [],
+      "bitsEligible": false
+    },
+    "ai-workspace": {
+      "density": "dense",
+      "scenarioSkills": ["skills/ai-native/SKILL.md"],
+      "references": [],
+      "bitsEligible": false
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "ai-saas-hero-vue",
+  "category": "ai-saas-hero",
+  "brief": {
+    "surface": "AI SaaS Hero",
+    "jobs": ["explain the product promise", "focus one proof moment"],
+    "frequency": "low",
+    "interaction": "primary CTA",
+    "constraints": ["Nuxt host", "sparse first viewport", "one signature motion"]
+  },
+  "framework": "vue",
+  "expected": {
+    "archetype": "ai-saas-hero",
+    "ownership": {
+      "foundation": "host-system",
+      "behavior": "host-system",
+      "expression": "vue-bits"
+    },
+    "rejectionKeywords": ["Radix", "AnimatedList"]
+  },
+  "budget": {
+    "maxRegistryResults": 8,
+    "fullCatalogsExcluded": true
+  }
+}

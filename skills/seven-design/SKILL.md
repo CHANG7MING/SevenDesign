@@ -14,9 +14,10 @@ description: Use when an AI agent or frontend team needs to design, build, polis
 1. `DESIGN.md`：产品语气、信息层级、布局和视觉原则。
 2. `TOKENS.md`：颜色、字体、间距、层级和动效 token。
 3. `skills/design-core/SKILL.md`：检查 → 定向 → 构建 → 验证的主循环。
-4. `skills/component-intelligence/SKILL.md`：先按产品任务选择 foundation、behavior 和 expression 的来源。
-5. 一个与任务匹配的工艺 Skill 和上下文 Skill。
-6. 只有 Component Intelligence 选中 Bits 表达层时，才加入 `skills/react-bits/SKILL.md`。
+4. `skills/seven-design/scripts/resolve-context.py`：先解析本次任务需要的最小 Skill、Reference 和 Catalog 集合。
+5. `skills/component-intelligence/SKILL.md`：按产品任务选择 foundation、behavior 和 expression 的来源。
+6. 一个与任务匹配的工艺 Skill 和上下文 Skill。
+7. 只有 Component Intelligence 选中 Bits 表达层时，才加入 `skills/react-bits/SKILL.md`。
 
 如果只安装了本入口而没有安装仓库其他 Skill，仍执行产品目标、状态设计、响应式和验收流程；不要假设缺失的配套 Skill 已经可用。
 
@@ -31,6 +32,8 @@ description: Use when an AI agent or frontend team needs to design, build, polis
 | 文档、帮助中心、引导、定价 | `design-core` + `component-intelligence` | `docs-pricing`、`review-animations` |
 | 高端发布页、硬件展示、汽车或性能产品 | `design-core` + `component-intelligence` | `luxe-landing`、`apple-design`、`emil-design-eng` |
 | 用户明确指定 React Bits / Vue Bits | `component-intelligence` | `react-bits`、`design-core`、场景 Skill |
+| 检查已实现页面、截图和响应式结果 | `visual-qa` | `playwright`、场景 Skill、`review-animations` |
+| 运行真实来源选型基准 | `benchmarks/run-benchmarks.py` | `component-intelligence` |
 | 查找值得加入动画的界面位置 | `find-animation-opportunities` | `react-bits`、`motion-review` |
 | 审计现有动效并生成改进计划 | `improve-animations` | `review-animations`、`motion-review` |
 | 动效设计或动效复审 | `animation-vocabulary` 或 `motion-review` | `apple-design`、`review-animations` |
@@ -38,6 +41,8 @@ description: Use when an AI agent or frontend team needs to design, build, polis
 | 需要独立证据、边界实现或全新复审的较大任务 | `team-mode` | 按任务加载上述 Skill |
 
 Component Intelligence 是 SevenDesign 的统一组件决策层。Agent 不应要求用户先选组件库，而应先识别产品任务，再在宿主系统、shadcn/ui、Radix UI、React Bits 和 Vue Bits 之间分配 foundation、behavior 与 expression 的归属。React Bits 是其中的公开表达层实现，不能覆盖产品层级、场景 Skill 的密度约束或上游动效质量标准；它只有在组件有明确的 reveal、focus、feedback、navigation、state、media 或 showcase 职责时才加入。
+
+按需加载是统一入口的默认行为。先运行 [`skills/seven-design/scripts/resolve-context.py`](../seven-design/scripts/resolve-context.py)，再按输出加载资源；不要把整个 `skills/`、完整 registry 或所有 references 一次性放入上下文。
 
 ## 工作协议
 
@@ -83,6 +88,21 @@ Component Intelligence 是 SevenDesign 的统一组件决策层。Agent 不应�
 
 如果公开源代码不在当前项目中，明确记录需要的公开依赖或安装步骤；不要把仓库中的 skill 文档描述成已经包含 React Bits 运行时代码，也不要声称拥有 Pro。
 
+## Visual QA 协议
+
+当存在可运行 UI、截图请求或视觉结果需要复审时：
+
+1. 加载 [`skills/visual-qa/SKILL.md`](../visual-qa/SKILL.md) 和对应的 [`audit-rubric.md`](../visual-qa/references/audit-rubric.md)。
+2. 用 [`capture-playwright.mjs`](../visual-qa/scripts/capture-playwright.mjs) 捕获桌面、移动和 reduced-motion 截图。
+3. 用 [`validate-report.py`](../visual-qa/scripts/validate-report.py) 校验结构化审计报告；`critical` / `high` 的未解决问题不能宣布视觉完成。
+4. 修改后必须重新截图同一视图，比较前后证据，不能只凭代码 diff 判断结果。
+
+如果运行环境没有 Playwright，明确报告环境缺口，不伪造截图或 Visual QA 结论。
+
+## Quality Benchmarks
+
+当修改 Component Intelligence、来源矩阵或主路由规则时，运行 [`benchmarks/run-benchmarks.py`](../../benchmarks/run-benchmarks.py)。基准报告会区分决策分和完整质量分；没有 Visual QA 证据时，不得把决策分冒充为最终 9.5/10 质量分。
+
 ## 验收
 
 在宣布完成前：
@@ -93,3 +113,4 @@ Component Intelligence 是 SevenDesign 的统一组件决策层。Agent 不应�
 - 运行仓库中的 `PRE-FLIGHT-CHECKLIST.md`；
 - 检查实际 diff 和共享工作区，拒绝未授权写入；
 - 对动效、无障碍、公开源依赖和常见 AI 生成模式进行针对性复审。
+- 对 Component Intelligence 修改，运行 20-case benchmark；对可运行 UI 修改，完成截图 → Visual Audit → 修改 → 再截图闭环。

@@ -1,0 +1,30 @@
+{
+  "required": [
+    "id",
+    "category",
+    "brief",
+    "framework",
+    "expected",
+    "budget"
+  ],
+  "brief": {
+    "required": ["surface", "jobs", "frequency", "constraints"]
+  },
+  "expected": {
+    "required": ["archetype", "ownership", "rejectionKeywords"],
+    "ownership": {
+      "required": ["foundation", "behavior", "expression"],
+      "ownerValues": [
+        "shadcn",
+        "radix",
+        "react-bits",
+        "vue-bits",
+        "host-system",
+        "none"
+      ]
+    }
+  },
+  "budget": {
+    "required": ["maxRegistryResults", "fullCatalogsExcluded"]
+  }
+}

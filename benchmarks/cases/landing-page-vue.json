@@ -1,0 +1,25 @@
+{
+  "id": "landing-page-vue",
+  "category": "landing-page",
+  "brief": {
+    "surface": "marketing landing page",
+    "jobs": ["explain product value", "show one proof"],
+    "frequency": "low",
+    "interaction": "CTA and mobile menu",
+    "constraints": ["Nuxt host", "sparse", "touch responsive"]
+  },
+  "framework": "vue",
+  "expected": {
+    "archetype": "landing-page",
+    "ownership": {
+      "foundation": "host-system",
+      "behavior": "host-system",
+      "expression": "vue-bits"
+    },
+    "rejectionKeywords": ["Dashboard", "Multiple signature"]
+  },
+  "budget": {
+    "maxRegistryResults": 8,
+    "fullCatalogsExcluded": true
+  }
+}

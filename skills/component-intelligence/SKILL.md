@@ -41,13 +41,14 @@ These layers compose; they are not mutually exclusive. A dashboard can use shadc
 ## Workflow
 
 1. Normalize the request into `archetype`, `surface`, `jobs`, `density`, `frequency`, `interaction`, `framework`, and `constraints`.
-2. Load the compact source matrix and select ownership by layer.
-3. Use [`scripts/select-source.py`](./scripts/select-source.py) for a deterministic first pass when the brief is structured.
-4. Recommend the smallest source set. One source may own multiple layers only when it genuinely fits.
-5. Explain why the foundation, behavior, and expression sources fit.
-6. Explain at least two rejected alternatives or why a layer is intentionally empty.
-7. For Bits candidates, hand the motion selection to [`../react-bits/SKILL.md`](../react-bits/SKILL.md). Do not copy expressive effects into dense or high-frequency surfaces.
-8. Record source provenance, exact files, dependency, token ownership, fallback, and review path.
+2. Run [`../seven-design/scripts/resolve-context.py`](../seven-design/scripts/resolve-context.py) when a task needs a loading plan; it returns the minimum context set and excludes full registries by default.
+3. Load the compact source matrix and select ownership by layer.
+4. Use [`scripts/select-source.py`](./scripts/select-source.py) for a deterministic first pass when the brief is structured.
+5. Recommend the smallest source set. One source may own multiple layers only when it genuinely fits.
+6. Explain why the foundation, behavior, and expression sources fit.
+7. Explain at least two rejected alternatives or why a layer is intentionally empty.
+8. For Bits candidates, hand the motion selection to [`../react-bits/SKILL.md`](../react-bits/SKILL.md). Do not copy expressive effects into dense or high-frequency surfaces.
+9. Record source provenance, exact files, dependency, token ownership, fallback, and review path.
 
 ## Output
 

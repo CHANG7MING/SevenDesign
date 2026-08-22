@@ -1,0 +1,25 @@
+{
+  "id": "portfolio-vue",
+  "category": "portfolio",
+  "brief": {
+    "surface": "creative portfolio",
+    "jobs": ["show selected work", "focus one case study"],
+    "frequency": "low",
+    "interaction": "pointer and keyboard navigation",
+    "constraints": ["Nuxt host", "sparse", "one signature effect"]
+  },
+  "framework": "vue",
+  "expected": {
+    "archetype": "portfolio",
+    "ownership": {
+      "foundation": "host-system",
+      "behavior": "host-system",
+      "expression": "vue-bits"
+    },
+    "rejectionKeywords": ["Radix as the visual", "CountUp"]
+  },
+  "budget": {
+    "maxRegistryResults": 8,
+    "fullCatalogsExcluded": true
+  }
+}

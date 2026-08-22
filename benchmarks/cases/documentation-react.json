@@ -1,0 +1,25 @@
+{
+  "id": "documentation-react",
+  "category": "documentation",
+  "brief": {
+    "surface": "documentation",
+    "jobs": ["find an API", "read examples", "navigate sections"],
+    "frequency": "medium",
+    "interaction": "keyboard search and navigation",
+    "constraints": ["calm reading surface", "code blocks", "responsive"]
+  },
+  "framework": "react",
+  "expected": {
+    "archetype": "documentation",
+    "ownership": {
+      "foundation": "shadcn",
+      "behavior": "radix",
+      "expression": "none"
+    },
+    "rejectionKeywords": ["Hero reveal", "FlowingMenu"]
+  },
+  "budget": {
+    "maxRegistryResults": 8,
+    "fullCatalogsExcluded": true
+  }
+}

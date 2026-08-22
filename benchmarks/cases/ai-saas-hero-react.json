@@ -1,0 +1,25 @@
+{
+  "id": "ai-saas-hero-react",
+  "category": "ai-saas-hero",
+  "brief": {
+    "surface": "AI SaaS Hero",
+    "jobs": ["explain the product promise", "focus one proof moment"],
+    "frequency": "low",
+    "interaction": "primary CTA and optional dialog",
+    "constraints": ["sparse first viewport", "one signature motion"]
+  },
+  "framework": "react",
+  "expected": {
+    "archetype": "ai-saas-hero",
+    "ownership": {
+      "foundation": "shadcn",
+      "behavior": "radix",
+      "expression": "react-bits"
+    },
+    "rejectionKeywords": ["AnimatedList", "FlowingMenu"]
+  },
+  "budget": {
+    "maxRegistryResults": 8,
+    "fullCatalogsExcluded": true
+  }
+}

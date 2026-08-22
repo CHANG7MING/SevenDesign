@@ -1,0 +1,25 @@
+{
+  "id": "data-dashboard-vue",
+  "category": "data-dashboard",
+  "brief": {
+    "surface": "data dashboard",
+    "jobs": ["scan metrics", "filter records"],
+    "frequency": "high",
+    "interaction": "touch and pointer filters",
+    "constraints": ["Vue host", "dense table", "no decorative motion"]
+  },
+  "framework": "vue",
+  "expected": {
+    "archetype": "data-dashboard",
+    "ownership": {
+      "foundation": "host-system",
+      "behavior": "host-system",
+      "expression": "none"
+    },
+    "rejectionKeywords": ["React Bits", "TiltedCard"]
+  },
+  "budget": {
+    "maxRegistryResults": 8,
+    "fullCatalogsExcluded": true
+  }
+}

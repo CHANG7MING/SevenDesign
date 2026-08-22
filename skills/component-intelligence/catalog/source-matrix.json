@@ -151,6 +151,188 @@
         "CountUp without a meaningful proof metric: it becomes decorative.",
         "Multiple signature effects in one viewport: the work loses authorship and hierarchy."
       ]
+    },
+    "landing-page": {
+      "aliases": ["landing page", "marketing landing page", "product landing page"],
+      "density": "sparse",
+      "defaultLayers": {
+        "foundation": {
+          "source": "shadcn",
+          "fallback": "host-system",
+          "reason": "Keep the landing shell, CTA, proof blocks, and tokens coherent."
+        },
+        "behavior": {
+          "source": "radix",
+          "when": "Only when navigation, pricing toggles, dialogs, or focus-sensitive controls need primitives.",
+          "fallback": "host-system"
+        },
+        "expression": {
+          "sourceByFramework": {
+            "react": "react-bits",
+            "vue": "vue-bits"
+          },
+          "candidates": {
+            "react": ["BlurText-TS-CSS", "SpotlightCard-JS-CSS"],
+            "vue": ["BlurText", "SpotlightCard"]
+          },
+          "reason": "Spend expression on the product promise or one proof moment, not on every section."
+        }
+      },
+      "reject": [
+        "Dashboard motion patterns: repeated metrics and filters do not belong in a sparse marketing surface.",
+        "Multiple signature effects: they compete with the product promise.",
+        "CountUp without a truthful proof metric: it becomes decorative."
+      ]
+    },
+    "editor": {
+      "aliases": ["editor", "content editor", "code editor", "creative editor"],
+      "density": "dense",
+      "defaultLayers": {
+        "foundation": {
+          "source": "host-system",
+          "fallback": "shadcn",
+          "reason": "Preserve the editor's existing surface, shortcut, and token language."
+        },
+        "behavior": {
+          "source": "radix",
+          "when": "Use for command menus, popovers, dialogs, tooltips, and focus management.",
+          "fallback": "host-system"
+        },
+        "expression": {
+          "source": "none",
+          "reason": "Typing, selection, and keyboard completion take priority over expressive motion."
+        }
+      },
+      "reject": [
+        "React Bits or Vue Bits as the default layer: reveal effects interrupt editing.",
+        "TiltedCard: pointer depth adds no value to authoring.",
+        "FlowingMenu: animated navigation competes with keyboard-driven work."
+      ]
+    },
+    "admin-console": {
+      "aliases": ["admin console", "back office", "admin panel"],
+      "density": "dense",
+      "defaultLayers": {
+        "foundation": {
+          "source": "shadcn",
+          "fallback": "host-system",
+          "reason": "Keep forms, tables, status surfaces, and density under one product foundation."
+        },
+        "behavior": {
+          "source": "radix",
+          "when": "Use for filters, dialogs, dropdowns, tooltips, switches, and keyboard focus.",
+          "fallback": "host-system"
+        },
+        "expression": {
+          "source": "none",
+          "reason": "Operational scanning and repeated actions should remain immediate."
+        }
+      },
+      "reject": [
+        "React Bits or Vue Bits as the default layer: expression competes with operations.",
+        "SpotlightCard: pointer focus does not improve record comparison.",
+        "FlowingMenu: navigation spectacle slows the admin workflow."
+      ]
+    },
+    "mobile-web": {
+      "aliases": ["mobile web", "mobile website", "responsive mobile page"],
+      "density": "standard",
+      "defaultLayers": {
+        "foundation": {
+          "source": "host-system",
+          "fallback": "shadcn",
+          "reason": "Use the host's responsive primitives and preserve its mobile token language."
+        },
+        "behavior": {
+          "source": "host-system",
+          "when": "Use existing touch and navigation primitives; add Radix only for React overlays that need it.",
+          "fallback": "radix"
+        },
+        "expression": {
+          "source": "none",
+          "reason": "Touch targets, content fit, and network-friendly rendering take priority."
+        }
+      },
+      "reject": [
+        "Desktop-first showcase effects: they often break touch and content fit.",
+        "TiltedCard: pointer depth is not a reliable mobile interaction.",
+        "Always-on motion: it consumes attention and battery without a product job."
+      ]
+    },
+    "documentation": {
+      "aliases": ["documentation", "docs site", "help center", "developer documentation"],
+      "density": "standard",
+      "defaultLayers": {
+        "foundation": {
+          "source": "shadcn",
+          "fallback": "host-system",
+          "reason": "Keep navigation, code surfaces, callouts, and content tokens consistent."
+        },
+        "behavior": {
+          "source": "radix",
+          "when": "Use for search, menus, dialogs, tabs, and focus-sensitive navigation.",
+          "fallback": "host-system"
+        },
+        "expression": {
+          "source": "none",
+          "reason": "Reading and wayfinding should remain calm and predictable."
+        }
+      },
+      "reject": [
+        "Hero reveal as the default: documentation value comes from findability and comprehension.",
+        "TiltedCard: perspective motion adds noise to code and reference content.",
+        "FlowingMenu: animated navigation harms fast wayfinding."
+      ]
+    },
+    "pricing": {
+      "aliases": ["pricing", "pricing page", "plan comparison"],
+      "density": "standard",
+      "defaultLayers": {
+        "foundation": {
+          "source": "shadcn",
+          "fallback": "host-system",
+          "reason": "Own plan cards, comparison states, CTAs, and tokens with a stable foundation."
+        },
+        "behavior": {
+          "source": "radix",
+          "when": "Use for billing-period toggles, dialogs, tooltips, and keyboard-visible focus.",
+          "fallback": "host-system"
+        },
+        "expression": {
+          "source": "none",
+          "reason": "Pricing clarity and trust are more important than decorative movement."
+        }
+      },
+      "reject": [
+        "CountUp without a truthful price or usage transition: it can obscure the offer.",
+        "TiltedCard: perspective competes with plan comparison.",
+        "Multiple signature effects: conversion choices need stable scanning."
+      ]
+    },
+    "ai-workspace": {
+      "aliases": ["ai workspace", "agent workspace", "copilot workspace"],
+      "density": "dense",
+      "defaultLayers": {
+        "foundation": {
+          "source": "shadcn",
+          "fallback": "host-system",
+          "reason": "Keep prompts, outputs, panels, and system states under one usable foundation."
+        },
+        "behavior": {
+          "source": "radix",
+          "when": "Use for command menus, model pickers, dialogs, popovers, and focus management.",
+          "fallback": "host-system"
+        },
+        "expression": {
+          "source": "none",
+          "reason": "Use system motion for generation state; do not add gallery-style expression to the workspace."
+        }
+      },
+      "reject": [
+        "React Bits or Vue Bits as the default layer: work completion and state clarity come first.",
+        "FlowingMenu: animated navigation competes with prompt and output flow.",
+        "SpotlightCard on every output: repeated pointer focus becomes visual noise."
+      ]
     }
   }
 }

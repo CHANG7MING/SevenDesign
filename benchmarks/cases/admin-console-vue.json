@@ -1,0 +1,25 @@
+{
+  "id": "admin-console-vue",
+  "category": "admin-console",
+  "brief": {
+    "surface": "admin panel",
+    "jobs": ["manage records", "review status"],
+    "frequency": "high",
+    "interaction": "keyboard and pointer",
+    "constraints": ["Vue host", "dense", "no decorative effects"]
+  },
+  "framework": "vue",
+  "expected": {
+    "archetype": "admin-console",
+    "ownership": {
+      "foundation": "host-system",
+      "behavior": "host-system",
+      "expression": "none"
+    },
+    "rejectionKeywords": ["React Bits", "SpotlightCard"]
+  },
+  "budget": {
+    "maxRegistryResults": 8,
+    "fullCatalogsExcluded": true
+  }
+}

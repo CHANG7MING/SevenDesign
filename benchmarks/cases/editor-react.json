@@ -1,0 +1,25 @@
+{
+  "id": "editor-react",
+  "category": "editor",
+  "brief": {
+    "surface": "editor",
+    "jobs": ["write content", "navigate with shortcuts", "inspect changes"],
+    "frequency": "high",
+    "interaction": "keyboard-first",
+    "constraints": ["dense", "focus must remain stable", "no reveal interruption"]
+  },
+  "framework": "react",
+  "expected": {
+    "archetype": "editor",
+    "ownership": {
+      "foundation": "host-system",
+      "behavior": "radix",
+      "expression": "none"
+    },
+    "rejectionKeywords": ["React Bits", "TiltedCard"]
+  },
+  "budget": {
+    "maxRegistryResults": 8,
+    "fullCatalogsExcluded": true
+  }
+}

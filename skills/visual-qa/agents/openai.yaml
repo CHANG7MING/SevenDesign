@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visual QA"
+  short_description: "Audit rendered UI with screenshot evidence"
+  default_prompt: "Use $visual-qa to capture desktop and mobile screenshots, audit the rendered UI, and verify fixes with a second capture."

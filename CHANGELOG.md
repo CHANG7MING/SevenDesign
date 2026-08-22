@@ -14,6 +14,9 @@
 - Added token-budget rules and a compact registry search helper so catalog size does not become default context cost.
 - Added the unified Component Intelligence layer, with a compact cross-source matrix and deterministic selector for choosing host system, shadcn/ui, Radix UI, React Bits, or Vue Bits by product job before implementation.
 - Routed the main SevenDesign workflow and README through Component Intelligence so React remains the default, Vue is explicit or evidence-based, dense surfaces can intentionally reject Bits motion, and low-token lookup stays the default.
+- Added a 20-case Component Intelligence benchmark suite with deterministic scoring and separate decision-score versus full-quality-score reporting.
+- Added the Visual QA Skill, Playwright-compatible desktop/mobile/reduced-motion capture entrypoint, audit rubric, and unresolved high-severity report gate.
+- Added the on-demand context manifest and resolver so only task-relevant Skills, references, catalogs, and selected source files enter the active context.
 
 ## 0.1.0
 

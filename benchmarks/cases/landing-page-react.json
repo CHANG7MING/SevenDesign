@@ -1,0 +1,25 @@
+{
+  "id": "landing-page-react",
+  "category": "landing-page",
+  "brief": {
+    "surface": "landing page",
+    "jobs": ["explain product value", "drive signup"],
+    "frequency": "low",
+    "interaction": "CTA and pricing toggle",
+    "constraints": ["sparse", "one authored proof moment"]
+  },
+  "framework": "react",
+  "expected": {
+    "archetype": "landing-page",
+    "ownership": {
+      "foundation": "shadcn",
+      "behavior": "radix",
+      "expression": "react-bits"
+    },
+    "rejectionKeywords": ["Dashboard", "Multiple signature"]
+  },
+  "budget": {
+    "maxRegistryResults": 8,
+    "fullCatalogsExcluded": true
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "portfolio-react",
+  "category": "portfolio",
+  "brief": {
+    "surface": "portfolio",
+    "jobs": ["show selected work", "create one authored media moment"],
+    "frequency": "low",
+    "interaction": "pointer and keyboard navigation",
+    "constraints": ["sparse", "one signature effect"]
+  },
+  "framework": "react",
+  "expected": {
+    "archetype": "portfolio",
+    "ownership": {
+      "foundation": "shadcn",
+      "behavior": "radix",
+      "expression": "react-bits"
+    },
+    "rejectionKeywords": ["Radix as the visual", "CountUp"]
+  },
+  "budget": {
+    "maxRegistryResults": 8,
+    "fullCatalogsExcluded": true
+  }
+}

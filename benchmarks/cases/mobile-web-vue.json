@@ -1,0 +1,25 @@
+{
+  "id": "mobile-web-vue",
+  "category": "mobile-web",
+  "brief": {
+    "surface": "mobile website",
+    "jobs": ["read content", "complete a primary action"],
+    "frequency": "medium",
+    "interaction": "touch-first",
+    "constraints": ["Vue host", "small viewport", "reduced motion"]
+  },
+  "framework": "vue",
+  "expected": {
+    "archetype": "mobile-web",
+    "ownership": {
+      "foundation": "host-system",
+      "behavior": "host-system",
+      "expression": "none"
+    },
+    "rejectionKeywords": ["TiltedCard", "Always-on motion"]
+  },
+  "budget": {
+    "maxRegistryResults": 8,
+    "fullCatalogsExcluded": true
+  }
+}

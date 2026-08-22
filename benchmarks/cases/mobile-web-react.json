@@ -1,0 +1,25 @@
+{
+  "id": "mobile-web-react",
+  "category": "mobile-web",
+  "brief": {
+    "surface": "mobile web",
+    "jobs": ["complete a short task", "find primary navigation"],
+    "frequency": "medium",
+    "interaction": "touch-first",
+    "constraints": ["React host", "small viewport", "network-friendly"]
+  },
+  "framework": "react",
+  "expected": {
+    "archetype": "mobile-web",
+    "ownership": {
+      "foundation": "host-system",
+      "behavior": "host-system",
+      "expression": "none"
+    },
+    "rejectionKeywords": ["TiltedCard", "Always-on motion"]
+  },
+  "budget": {
+    "maxRegistryResults": 8,
+    "fullCatalogsExcluded": true
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "ai-workspace-react",
+  "category": "ai-workspace",
+  "brief": {
+    "surface": "AI workspace",
+    "jobs": ["write a prompt", "inspect output", "manage model state"],
+    "frequency": "high",
+    "interaction": "keyboard, pointer, and streaming state",
+    "constraints": ["dense work surface", "clear loading and error states"]
+  },
+  "framework": "react",
+  "expected": {
+    "archetype": "ai-workspace",
+    "ownership": {
+      "foundation": "shadcn",
+      "behavior": "radix",
+      "expression": "none"
+    },
+    "rejectionKeywords": ["React Bits", "FlowingMenu"]
+  },
+  "budget": {
+    "maxRegistryResults": 8,
+    "fullCatalogsExcluded": true
+  }
+}

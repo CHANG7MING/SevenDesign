@@ -1,0 +1,25 @@
+{
+  "id": "admin-console-react",
+  "category": "admin-console",
+  "brief": {
+    "surface": "admin console",
+    "jobs": ["manage users", "filter records", "review status"],
+    "frequency": "high",
+    "interaction": "keyboard and pointer",
+    "constraints": ["dense", "accessible filters", "immediate actions"]
+  },
+  "framework": "react",
+  "expected": {
+    "archetype": "admin-console",
+    "ownership": {
+      "foundation": "shadcn",
+      "behavior": "radix",
+      "expression": "none"
+    },
+    "rejectionKeywords": ["React Bits", "FlowingMenu"]
+  },
+  "budget": {
+    "maxRegistryResults": 8,
+    "fullCatalogsExcluded": true
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "documentation-vue",
+  "category": "documentation",
+  "brief": {
+    "surface": "docs site",
+    "jobs": ["find a guide", "read code examples"],
+    "frequency": "medium",
+    "interaction": "keyboard and touch navigation",
+    "constraints": ["Vue host", "calm reading", "responsive"]
+  },
+  "framework": "vue",
+  "expected": {
+    "archetype": "documentation",
+    "ownership": {
+      "foundation": "host-system",
+      "behavior": "host-system",
+      "expression": "none"
+    },
+    "rejectionKeywords": ["Hero reveal", "TiltedCard"]
+  },
+  "budget": {
+    "maxRegistryResults": 8,
+    "fullCatalogsExcluded": true
+  }
+}

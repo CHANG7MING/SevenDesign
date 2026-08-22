@@ -1,0 +1,25 @@
+{
+  "id": "pricing-react",
+  "category": "pricing",
+  "brief": {
+    "surface": "pricing page",
+    "jobs": ["compare plans", "choose a billing period"],
+    "frequency": "low",
+    "interaction": "toggle and CTA",
+    "constraints": ["trustworthy comparison", "stable scanning"]
+  },
+  "framework": "react",
+  "expected": {
+    "archetype": "pricing",
+    "ownership": {
+      "foundation": "shadcn",
+      "behavior": "radix",
+      "expression": "none"
+    },
+    "rejectionKeywords": ["CountUp", "TiltedCard"]
+  },
+  "budget": {
+    "maxRegistryResults": 8,
+    "fullCatalogsExcluded": true
+  }
+}

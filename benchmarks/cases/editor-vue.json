@@ -1,0 +1,25 @@
+{
+  "id": "editor-vue",
+  "category": "editor",
+  "brief": {
+    "surface": "content editor",
+    "jobs": ["write content", "manage blocks"],
+    "frequency": "high",
+    "interaction": "keyboard and touch",
+    "constraints": ["Vue host", "dense", "stable selection"]
+  },
+  "framework": "vue",
+  "expected": {
+    "archetype": "editor",
+    "ownership": {
+      "foundation": "host-system",
+      "behavior": "host-system",
+      "expression": "none"
+    },
+    "rejectionKeywords": ["React Bits", "FlowingMenu"]
+  },
+  "budget": {
+    "maxRegistryResults": 8,
+    "fullCatalogsExcluded": true
+  }
+}

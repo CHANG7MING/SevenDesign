@@ -35,15 +35,17 @@ Flow:
 2. Copy base files from [`examples/`](./examples)
 3. Apply rules from [`implementation/`](./implementation)
 4. Build pages using archetypes and components
-5. Run [`skills/component-intelligence/scripts/select-source.py`](./skills/component-intelligence/scripts/select-source.py) with the normalized brief; React is the default and Vue is selected only from explicit request or host evidence
-6. If the expression layer is React Bits or Vue Bits, read [`skills/react-bits/SKILL.md`](./skills/react-bits/SKILL.md), then resolve the framework with [`skills/react-bits/references/framework-selection.md`](./skills/react-bits/references/framework-selection.md)
-7. For a Bits expression layer, normalize the remaining motion brief and read [`skills/react-bits/references/selection-protocol.md`](./skills/react-bits/references/selection-protocol.md)
-8. Compare candidates with [`skills/react-bits/catalog/selection-matrix.json`](./skills/react-bits/catalog/selection-matrix.json) and [`skills/react-bits/catalog/frameworks.json`](./skills/react-bits/catalog/frameworks.json), then search the resolved registry only when needed
-9. If a bundled variant fits, inspect the resolved source directory and copy or adapt only the required files into the host project
-10. If no bundled variant fits, use the matching public registry entry and record the public installation path; never imply that an unbundled component is already installed
-11. Record the resolved framework, ownership plan, recommendation, rejected alternatives, source provenance, selected variant, exact copied files, token substitutions, dependencies, responsive behavior, focus behavior, and reduced-motion fallback
-12. Run [`skills/motion-review/SKILL.md`](./skills/motion-review/SKILL.md); if animation code changed, run [`skills/review-animations/SKILL.md`](./skills/review-animations/SKILL.md)
-13. Validate with [`PRE-FLIGHT-CHECKLIST.md`](./PRE-FLIGHT-CHECKLIST.md)
+5. Run [`skills/seven-design/scripts/resolve-context.py`](./skills/seven-design/scripts/resolve-context.py) with the normalized brief and load only its returned resources
+6. Run [`skills/component-intelligence/scripts/select-source.py`](./skills/component-intelligence/scripts/select-source.py) with the normalized brief; React is the default and Vue is selected only from explicit request or host evidence
+7. If the expression layer is React Bits or Vue Bits, read [`skills/react-bits/SKILL.md`](./skills/react-bits/SKILL.md), then resolve the framework with [`skills/react-bits/references/framework-selection.md`](./skills/react-bits/references/framework-selection.md)
+8. For a Bits expression layer, normalize the remaining motion brief and read [`skills/react-bits/references/selection-protocol.md`](./skills/react-bits/references/selection-protocol.md)
+9. Compare candidates with [`skills/react-bits/catalog/selection-matrix.json`](./skills/react-bits/catalog/selection-matrix.json) and [`skills/react-bits/catalog/frameworks.json`](./skills/react-bits/catalog/frameworks.json), then search the resolved registry only when needed
+10. If a bundled variant fits, inspect the resolved source directory and copy or adapt only the required files into the host project
+11. If no bundled variant fits, use the matching public registry entry and record the public installation path; never imply that an unbundled component is already installed
+12. Record the resolved framework, ownership plan, recommendation, rejected alternatives, source provenance, selected variant, exact copied files, token substitutions, dependencies, responsive behavior, focus behavior, and reduced-motion fallback
+13. Run [`skills/motion-review/SKILL.md`](./skills/motion-review/SKILL.md); if animation code changed, run [`skills/review-animations/SKILL.md`](./skills/review-animations/SKILL.md)
+14. If a runnable UI exists, run [`skills/visual-qa/SKILL.md`](./skills/visual-qa/SKILL.md) and complete the screenshot → audit → fix → screenshot loop
+15. Validate with [`PRE-FLIGHT-CHECKLIST.md`](./PRE-FLIGHT-CHECKLIST.md)
 
 For token efficiency, “search the registry” means running [`skills/react-bits/scripts/search-registry.py`](./skills/react-bits/scripts/search-registry.py) with a narrow query. Do not load the full React or Vue registry into the active context.
 
@@ -68,6 +70,8 @@ Flow:
 10. Reject outputs that violate [`FORBIDDEN-PATTERNS.md`](./FORBIDDEN-PATTERNS.md)
 
 Component Intelligence is the source-neutral decision step; React Bits is only the selected public expression implementation. If the public source is not present locally, do not claim that it is installed; use the project's documented public installation path or record the missing dependency.
+
+For changes to source selection or routing, run [`benchmarks/run-benchmarks.py`](./benchmarks/run-benchmarks.py). A benchmark decision score is not a final quality score until Visual QA evidence exists.
 
 ### Mode 4: Team Workflow
 

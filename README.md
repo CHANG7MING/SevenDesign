@@ -51,6 +51,16 @@ SEVENDESIGN 是一套面向 AI 智能体与前端团队、以产品思维为核�
 
 对于较大的任务，再加入 [`skills/team-mode/SKILL.md`](./skills/team-mode/SKILL.md) 以及本地路由指南 [`skills/team-mode/references/seven-design-routing.md`](./skills/team-mode/references/seven-design-routing.md)。
 
+## 质量闭环
+
+SevenDesign 现在不只检查规则和代码，还增加了三层可验证质量闭环：
+
+1. [`benchmarks/`](./benchmarks/)：20 个覆盖 AI SaaS、Dashboard、Landing Page、Editor、Admin、Portfolio、Mobile Web、Documentation、Pricing 和 AI Workspace 的真实任务，用来测试 Component Intelligence 是否正确选择来源，并解释为什么选、为什么不选。
+2. [`visual-qa`](./skills/visual-qa/SKILL.md)：对可运行页面执行“截图 → Visual Audit → 修改 → 再截图”，覆盖桌面、移动和 reduced-motion 状态。
+3. [`resolve-context.py`](./skills/seven-design/scripts/resolve-context.py)：按需加载 Skill、Reference 和 Catalog，默认排除完整 registry、`llms.txt` 和无关源码。
+
+当前 benchmark 的“决策分”与最终质量分分开计算。只有完成 Visual QA、响应式、无障碍和实现验证后，才允许宣称达到 9.5/10；没有截图证据时不会把规则判断分冒充成完整质量分。
+
 ## 核心循环
 
 ```mermaid
@@ -91,6 +101,7 @@ flowchart LR
 | 上下文 | AI、开发者工具、文档 / 定价、高端发布 | [`skills/`](./skills) |
 | 团队 | 证据、边界执行、全新复审 | [`team-mode`](./skills/team-mode/SKILL.md) |
 | 防线 | 反套路、质量、无障碍、可构建性 | [`FORBIDDEN-PATTERNS.md`](./FORBIDDEN-PATTERNS.md) · [`PRE-FLIGHT-CHECKLIST.md`](./PRE-FLIGHT-CHECKLIST.md) |
+| 质量闭环 | 20-case Benchmark、截图审计、按需上下文加载 | [`benchmarks/`](./benchmarks) · [`visual-qa`](./skills/visual-qa/SKILL.md) · [`resolve-context.py`](./skills/seven-design/scripts/resolve-context.py) |
 
 ## 选择上下文技能
 

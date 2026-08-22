@@ -7,6 +7,7 @@ Run this checklist before considering a design output complete.
 - Did you choose a preset or clearly define a flavor mix?
 - Did you choose at least one relevant brand reference?
 - Did you choose a page archetype?
+- If the source matrix or Component Intelligence changed, did the 20-case benchmark run?
 
 ## 2. System Consistency
 
@@ -83,6 +84,9 @@ Run this checklist before considering a design output complete.
 - Was the runnable result inspected at desktop and mobile sizes?
 - Were focus, loading, empty, error, long-content, and overflow states exercised where relevant?
 - If Pro source or assets were unavailable, is the implementation honest about that boundary?
+- If a runnable UI changed, were desktop, mobile, and reduced-motion screenshots captured?
+- If a visual audit found high-severity issues, were they resolved or explicitly accepted with evidence?
+- Was the same view captured again after visual fixes?
 
 ## 9. Team handoff (when Team Mode is used)
 
