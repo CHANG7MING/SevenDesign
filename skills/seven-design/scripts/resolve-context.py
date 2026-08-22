@@ -111,6 +111,11 @@ def main() -> int:
             "skills/react-bits/SKILL.md",
             "Bits is eligible for the sparse expression layer",
         )
+        add_resource(
+            catalogs,
+            "skills/react-bits/scripts/check-upstream.py",
+            "check the selected public upstream HEAD before implementation",
+        )
         if framework == "vue":
             add_resource(
                 catalogs,
@@ -174,6 +179,11 @@ def main() -> int:
             "bitsEligible": bits_allowed,
             "visualQaRequested": visual_requested,
             "registryLookup": "narrow follow-up, maximum 8 results",
+            "upstreamCheck": (
+                "run check-upstream.py for the resolved framework before using Bits"
+                if bits_allowed
+                else "not required because Bits is not eligible for this task"
+            ),
         },
     }
     print(json.dumps(result, indent=2, ensure_ascii=True))

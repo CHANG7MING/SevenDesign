@@ -36,6 +36,7 @@ Use the bundled resources before reaching for a new external lookup:
 - [`catalog/frameworks.json`](./catalog/frameworks.json): React-default and Vue-secondary framework routing
 - [`catalog/vue/README.md`](./catalog/vue/README.md): selective Vue Bits public snapshot
 - [`catalog/registry.json`](./catalog/registry.json): public React Bits registry snapshot
+- [`scripts/check-upstream.py`](./scripts/check-upstream.py): one-request remote HEAD check for the selected framework
 - [`scripts/search-registry.py`](./scripts/search-registry.py): compact registry search for unbundled public variants
 - [`catalog/components/`](./catalog/components/): reusable source for six public component variants
 - [`catalog/llms.txt`](./catalog/llms.txt): upstream public catalog text for discovery
@@ -65,6 +66,9 @@ If the job cannot be stated in one sentence, do not add the component.
 - React is the default implementation framework. If the user says Vue, Nuxt, or the host project's evidence is Vue, resolve to the Vue catalog; if the choice is ambiguous, ask once and state that React is the default.
 - Keep semantic selection framework-neutral, then choose the matching React or Vue source. Do not silently port source across frameworks.
 - Treat the pinned public catalog and source in [`catalog/`](./catalog/) as the first implementation authority for the bundled variants; use the upstream public registry for variants not bundled here.
+- When Bits is selected for the task, run `python3 skills/react-bits/scripts/check-upstream.py --framework <react|vue>` before implementation. This checks the latest public repository commit without cloning the repository.
+- If the remote commit differs from the pinned snapshot, inspect only the latest public registry entry or source path needed by the task. Do not refresh or load the entire catalog during a normal task.
+- If the remote check is unavailable, use the local pinned snapshot, record that the check was unavailable, and do not present the local snapshot as the latest upstream content.
 - The bundled Vue snapshot is intentionally selective: `BlurText` and `SpotlightCard` are available locally; other Vue registry entries are registry-only unless separately materialized.
 - Prefer the host project's existing stack and dependency set; choose JavaScript or TypeScript, then CSS or Tailwind, to match it.
 - Inspect dependencies, browser requirements, asset assumptions, bundle cost, and fallback behavior before integration.
@@ -75,22 +79,23 @@ If the job cannot be stated in one sentence, do not add the component.
 
 1. Normalize the request and apply the selection protocol before searching by visual name.
 2. Search [`catalog/selection-matrix.json`](./catalog/selection-matrix.json) and [`catalog/frameworks.json`](./catalog/frameworks.json) for the smallest bundled component that performs the named job.
-3. If a bundled component fits, inspect only its actual source directory and note the exact files copied or adapted.
-4. If no bundled component fits, run `scripts/search-registry.py` with a narrow query and document the public source path required by the host project.
-5. Assign one motion tier:
+3. Run the selected framework's upstream HEAD check. If it changed, inspect only the latest public entry or source path needed for the decision.
+4. If a bundled component fits, inspect only its actual source directory and note the exact files copied or adapted.
+5. If no bundled component fits, run `scripts/search-registry.py` with a narrow query and document the public source path required by the host project.
+6. Assign one motion tier:
    - `micro`: hover, focus, press, validation, or local feedback
    - `system`: panel, route, state, or content transitions
    - `signature`: a memorable hero, media, showcase, or product reveal
-6. Map the component to the active SevenDesign preset, brand recipe, archetype, and visual dials.
-7. Preserve the useful motion language, but replace colors, typography, spacing, surfaces, content, focus states, and status semantics with the host product's tokens.
-8. Define the animation contract before implementation:
+7. Map the component to the active SevenDesign preset, brand recipe, archetype, and visual dials.
+8. Preserve the useful motion language, but replace colors, typography, spacing, surfaces, content, focus states, and status semantics with the host product's tokens.
+9. Define the animation contract before implementation:
    - product job
    - trigger
    - choreography order
    - interruption, replay, and cancellation behavior
    - resting state
    - reduced-motion fallback
-9. Use [`../motion-review/SKILL.md`](../motion-review/SKILL.md) for the page and component composition. If animation code changes, use [`../review-animations/SKILL.md`](../review-animations/SKILL.md) as the strict code-level authority.
+10. Use [`../motion-review/SKILL.md`](../motion-review/SKILL.md) for the page and component composition. If animation code changes, use [`../review-animations/SKILL.md`](../review-animations/SKILL.md) as the strict code-level authority.
 
 ## Composition rules
 

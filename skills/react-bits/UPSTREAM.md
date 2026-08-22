@@ -46,10 +46,13 @@ Only the Vue `BlurText` and `SpotlightCard` sources are materialized locally. Th
 
 Refresh only from the official public repository:
 
-1. Clone or fetch the public repository at a reviewed commit.
-2. Replace `catalog/registry.json` and `catalog/llms.txt`.
-3. Replace the selected component registry JSON files and materialized source directories.
-4. Update this file with the new commit and snapshot date.
-5. Re-run the skill validator, source manifest check, and `git diff --check`.
+1. Before using a Bits source, run `python3 scripts/check-upstream.py --framework react` or `--framework vue`. This checks the remote HEAD without cloning the repository.
+2. If the remote commit is unchanged, use the local pinned catalog.
+3. If the remote commit changed, inspect only the latest public registry entry or source path required by the task. Keep the local snapshot unless a deliberate repository refresh is being performed.
+4. For a deliberate refresh, clone or fetch the public repository at a reviewed commit.
+5. Replace `catalog/registry.json` and `catalog/llms.txt`.
+6. Replace the selected component registry JSON files and materialized source directories.
+7. Update this file with the new commit and snapshot date.
+8. Re-run the skill validator, source manifest check, and `git diff --check`.
 
 For Vue, refresh only from the official public Vue Bits repository and preserve the same selective-source policy. Do not refresh from React Bits Pro, Vue private URLs, browser-only gated pages, or copied asset bundles.
