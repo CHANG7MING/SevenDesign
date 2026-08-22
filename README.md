@@ -24,7 +24,7 @@
 
 SEVENDESIGN 是一套面向 AI 智能体与前端团队、以产品思维为核心的设计操作系统。
 
-它把松散的产品需求转化为明确的视觉方向、统一的界面系统和可复审的实现路径，并结合 Apple 风格的流畅交互、Emil Kowalski 的动效工艺、公开 React Bits 组件，以及探索者 / 执行者 / 复审者的团队协作模型。
+它把松散的产品需求转化为明确的视觉方向、统一的界面系统、可解释的组件选型和可复审的实现路径，并结合 Apple 风格的流畅交互、Emil Kowalski 的动效工艺、React 默认与 Vue 可选的公开 Bits 组件，以及探索者 / 执行者 / 复审者的团队协作模型。
 
 ## 安装与入口
 
@@ -102,16 +102,25 @@ flowchart LR
 
 ## React Bits 接入边界
 
-SevenDesign 已经在 skill 和设计协议层正式接入 [React Bits](https://github.com/DavidHDev/react-bits)。它是公开组件与动效实现扩展，不是运行时依赖，也不是一套可以覆盖产品判断的主题。
+SevenDesign 已经在 skill、设计协议和本地资源层真正接入 [React Bits](https://github.com/DavidHDev/react-bits)。仓库内包含官方公开 registry 的 pinned snapshot，以及 6 组可直接复制或适配的公开组件源码：
+
+- [`AnimatedList-TS-CSS`](./skills/react-bits/catalog/components/AnimatedList-TS-CSS/)：结果或列表的低频 reveal
+- [`BlurText-TS-CSS`](./skills/react-bits/catalog/components/BlurText-TS-CSS/)：解释、结果和 onboarding reveal
+- [`CountUp-JS-CSS`](./skills/react-bits/catalog/components/CountUp-JS-CSS/)：少量关键指标强调
+- [`FlowingMenu-JS-CSS`](./skills/react-bits/catalog/components/FlowingMenu-JS-CSS/)：编排型导航或 showcase
+- [`SpotlightCard-JS-CSS`](./skills/react-bits/catalog/components/SpotlightCard-JS-CSS/)：低频 showcase 卡片的 pointer focus
+- [`TiltedCard-JS-TW`](./skills/react-bits/catalog/components/TiltedCard-JS-TW/)：产品或媒体 showcase
+
+先按 [`skills/react-bits/references/framework-selection.md`](./skills/react-bits/references/framework-selection.md) 解析 React 或 Vue，再按 [`skills/react-bits/references/selection-protocol.md`](./skills/react-bits/references/selection-protocol.md) 把需求归一化为产品任务。未指定框架时默认 React；如果用户或宿主项目明确使用 Vue / Nuxt，再切换到 Vue Bits。之后查对应的本地 catalog 与 registry，读取真实源码，再复制到宿主项目并做 token、依赖、响应式和 reduced-motion 适配。catalog 是 Skill 的公开资源层，不是 SevenDesign 的 runtime dependency，也不能直接从宿主项目 import。
 
 接入时遵循四条边界：
 
 1. 先写产品任务，再选组件；没有明确任务就不引入动效。
-2. 优先使用 React Bits 的公开源码、公开变体和项目已有依赖，并映射到本项目的 token、字体、间距、焦点和状态。
+2. 优先使用本地 pinned public catalog；未内置的组件再按官方 public registry 记录公开安装路径，并映射到本项目的 token、字体、间距、焦点和状态。
 3. 使用 `micro`、`system`、`signature` 三档动效预算；默认每个 viewport 只保留一个 signature 动效。
 4. Pro 如果无法合法获得，只参考公开可见的分类、构图和工作流，不复制收费源码、私有素材或 gated template，也不声称本地已经安装了 Pro。
 
-产品级编排使用 [`skills/motion-review/SKILL.md`](./skills/motion-review/SKILL.md)，动效代码级严格复审使用 [`skills/review-animations/SKILL.md`](./skills/review-animations/SKILL.md)。
+来源、commit、license 和刷新边界见 [`skills/react-bits/UPSTREAM.md`](./skills/react-bits/UPSTREAM.md)、[`skills/react-bits/REACT-BITS-LICENSE.md`](./skills/react-bits/REACT-BITS-LICENSE.md)、[`skills/react-bits/VUE-BITS-LICENSE.md`](./skills/react-bits/VUE-BITS-LICENSE.md) 和 [`skills/react-bits/catalog/frameworks.json`](./skills/react-bits/catalog/frameworks.json)。Token 控制规则见 [`skills/react-bits/references/token-budget.md`](./skills/react-bits/references/token-budget.md)：默认只读紧凑矩阵和命中的源码，不整份加载 registry 或 `llms.txt`。产品级编排使用 [`skills/motion-review/SKILL.md`](./skills/motion-review/SKILL.md)，需要寻找动画机会时使用 [`skills/find-animation-opportunities/SKILL.md`](./skills/find-animation-opportunities/SKILL.md)，审计现有动效时使用 [`skills/improve-animations/SKILL.md`](./skills/improve-animations/SKILL.md)，动效代码级严格复审使用 [`skills/review-animations/SKILL.md`](./skills/review-animations/SKILL.md)。
 
 ## 设计工艺基线
 
@@ -130,7 +139,8 @@ SEVENDESIGN 完整引入了 [`attentiondotnet/emilkowalski_skills`](https://gith
 - Apple、Linear、Notion、Stripe、Supabase、Vercel、Tesla 和 Runway 的品牌参考。
 - 发布页、仪表盘、AI 工作区、文档、定价页、框架首页等页面原型。
 - 可复用的组件配方，以及 Tailwind / shadcn / Radix 示例。
-- React Bits 公开组件接入协议、动效分级、token 适配和 Pro 边界。
+- React Bits / Vue Bits 官方公开 registry 快照、基于产品任务与框架的智能选型协议、React 默认与 Vue 可选的公开组件源码、组件 provenance、动效分级、token 适配和 Pro 边界。
+- React Bits 官方的动画机会发现与动效改进审计 Skill。
 - 一套包含调度包、单写入者归属、全新复审、运行时就绪门槛和失败恢复的团队模式路由契约。
 - 一个小型的 [`personal-site/`](./personal-site/) Apple 风格首页原型。
 
@@ -162,7 +172,7 @@ SEVENDESIGN 完整引入了 [`attentiondotnet/emilkowalski_skills`](https://gith
 - [`implementation/SHADCN-GUIDE.md`](./implementation/SHADCN-GUIDE.md)
 - [`examples/`](./examples)
 
-这套库在原则上与框架无关；Tailwind CSS、shadcn/ui 和 Radix 是参考实现技术栈。React Bits 的实际组件源码仍应按具体项目的公开安装方式获取；本仓库不复制整套上游实现。
+这套库在原则上与框架无关；Tailwind CSS、shadcn/ui 和 Radix 是参考实现技术栈。React Bits 的公开组件源码已按选择性快照内置，适合复制或适配到宿主项目；本仓库不复制整套上游实现，也不包含 Pro、私有素材或 gated template。
 
 ## 质量门槛
 
@@ -194,4 +204,4 @@ SevenDesign 现在可以直接作为：
 
 ## 许可证
 
-SEVENDESIGN 采用 MIT 许可证。引入的上游源文件保留各自的声明，详见 [`skills/EMILKOWALSKI-LICENSE.txt`](./skills/EMILKOWALSKI-LICENSE.txt) 和 [`skills/TEAM-MODE-LICENSE.txt`](./skills/TEAM-MODE-LICENSE.txt)。
+SEVENDESIGN 采用 MIT 许可证。引入的上游源文件保留各自的声明，详见 [`skills/EMILKOWALSKI-LICENSE.txt`](./skills/EMILKOWALSKI-LICENSE.txt)、[`skills/TEAM-MODE-LICENSE.txt`](./skills/TEAM-MODE-LICENSE.txt)、[`skills/react-bits/REACT-BITS-LICENSE.md`](./skills/react-bits/REACT-BITS-LICENSE.md) 和 [`skills/react-bits/VUE-BITS-LICENSE.md`](./skills/react-bits/VUE-BITS-LICENSE.md)。

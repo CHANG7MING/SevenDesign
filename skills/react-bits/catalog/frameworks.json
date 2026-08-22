@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "defaultFramework": "react",
+  "resolutionOrder": [
+    "explicit-user-request",
+    "existing-host-project-evidence",
+    "ask-if-implementation-choice-is-ambiguous",
+    "react-default"
+  ],
+  "tokenBudget": {
+    "selectionReads": [
+      "catalog/selection-matrix.json",
+      "catalog/frameworks.json",
+      "references/framework-selection.md",
+      "references/selection-protocol.md"
+    ],
+    "registrySearch": "scripts/search-registry.py",
+    "maxRegistryResults": 8,
+    "neverLoadByDefault": [
+      "catalog/registry.json",
+      "catalog/vue/registry.json",
+      "catalog/llms.txt",
+      "catalog/*/*.json"
+    ]
+  },
+  "frameworks": {
+    "react": {
+      "label": "React",
+      "default": true,
+      "registry": "catalog/registry.json",
+      "sourceRoot": "catalog/components/",
+      "bundled": {
+        "AnimatedList-TS-CSS": {
+          "source": "catalog/components/AnimatedList-TS-CSS/",
+          "dependency": "motion@^12.23.12"
+        },
+        "BlurText-TS-CSS": {
+          "source": "catalog/components/BlurText-TS-CSS/",
+          "dependency": "motion@^12.23.12"
+        },
+        "CountUp-JS-CSS": {
+          "source": "catalog/components/CountUp-JS-CSS/",
+          "dependency": "motion@^12.23.12"
+        },
+        "FlowingMenu-JS-CSS": {
+          "source": "catalog/components/FlowingMenu-JS-CSS/",
+          "dependency": "gsap@^3.13.0"
+        },
+        "SpotlightCard-JS-CSS": {
+          "source": "catalog/components/SpotlightCard-JS-CSS/",
+          "dependency": "none"
+        },
+        "TiltedCard-JS-TW": {
+          "source": "catalog/components/TiltedCard-JS-TW/",
+          "dependency": "motion@^12.23.12"
+        }
+      }
+    },
+    "vue": {
+      "label": "Vue",
+      "default": false,
+      "registry": "catalog/vue/registry.json",
+      "sourceRoot": "catalog/vue/components/",
+      "bundled": {
+        "BlurText-TS-CSS": {
+          "source": "catalog/vue/components/BlurText/",
+          "dependency": "motion-v@^1.10.2"
+        },
+        "SpotlightCard-JS-CSS": {
+          "source": "catalog/vue/components/SpotlightCard/",
+          "dependency": "none"
+        }
+      }
+    }
+  }
+}

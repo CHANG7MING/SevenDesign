@@ -19,8 +19,18 @@ Run this checklist before considering a design output complete.
 - If multiple component systems are used, are they visually normalized?
 - Are `shadcn/ui`, `radix ui`, React Bits, and any dense components aligned under one token system?
 - Are stock third-party styles removed or restyled?
-- If React Bits is used, is the public source, selected variant, dependency footprint, and token adaptation recorded?
-- Is the actual React Bits source available through the project's public dependency or installation path?
+- If React Bits is used, was the local pinned catalog checked first?
+- If React Bits is used, was the brief normalized into surface, jobs, frequency, interaction, content role, and constraints?
+- Was the framework resolved explicitly, from host-project evidence, or by the documented React default?
+- If Vue was selected, was the Vue Bits public source used instead of silently porting React source?
+- Did the selection avoid loading full registries, `llms.txt`, and unrelated component JSON?
+- If a registry lookup was needed, was it narrowed through `search-registry.py` with eight or fewer results?
+- Does the recommendation explain why the chosen component fits and why plausible alternatives were rejected?
+- Is the selection limited to the smallest component set with separate product jobs?
+- If React Bits is used, are the public source, upstream commit, selected variant, exact copied/adapted files, dependency footprint, and token adaptation recorded?
+- Is the actual React Bits source available through the local catalog or the project's documented public dependency/installation path?
+- Is `skills/react-bits/catalog/` treated as a source snapshot rather than imported as a host runtime dependency?
+- Is the public-source boundary clear, with no copied Pro/private/gated source or asset?
 
 ## 4. Product Quality
 
@@ -43,6 +53,8 @@ Run this checklist before considering a design output complete.
 - Are movement and hover effects adapted for reduced-motion and touch input?
 - Are routine UI transitions under 300ms unless a concrete reason justifies more time?
 - Was [`skills/motion-review/SKILL.md`](./skills/motion-review/SKILL.md) run for product-level composition?
+- If the question was where to add motion, was [`skills/find-animation-opportunities/SKILL.md`](./skills/find-animation-opportunities/SKILL.md) used as a read-only filter?
+- If existing motion was audited, was [`skills/improve-animations/SKILL.md`](./skills/improve-animations/SKILL.md) used to produce scoped plans?
 - Was [`skills/review-animations/SKILL.md`](./skills/review-animations/SKILL.md) used when animation code was changed?
 
 ## 6. Responsiveness

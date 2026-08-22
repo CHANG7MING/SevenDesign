@@ -54,6 +54,15 @@ See [`skills/UPSTREAM-SOURCE.md`](./skills/UPSTREAM-SOURCE.md) for provenance an
 ### React Bits extension layer
 
 - Public component and motion integration: [`skills/react-bits/SKILL.md`](./skills/react-bits/SKILL.md)
+- Intelligent component selection protocol: [`skills/react-bits/references/selection-protocol.md`](./skills/react-bits/references/selection-protocol.md)
+- React-default / Vue-secondary framework routing: [`skills/react-bits/references/framework-selection.md`](./skills/react-bits/references/framework-selection.md)
+- Token-budget loading rules: [`skills/react-bits/references/token-budget.md`](./skills/react-bits/references/token-budget.md)
+- Local pinned public catalog: [`skills/react-bits/catalog/README.md`](./skills/react-bits/catalog/README.md)
+- Machine-readable selection matrix: [`skills/react-bits/catalog/selection-matrix.json`](./skills/react-bits/catalog/selection-matrix.json)
+- Vue Bits selective public snapshot: [`skills/react-bits/catalog/vue/README.md`](./skills/react-bits/catalog/vue/README.md)
+- Bundled public source snapshot and provenance: [`skills/react-bits/UPSTREAM.md`](./skills/react-bits/UPSTREAM.md)
+- Find high-confidence animation opportunities: [`skills/find-animation-opportunities/SKILL.md`](./skills/find-animation-opportunities/SKILL.md)
+- Audit existing motion and write implementation plans: [`skills/improve-animations/SKILL.md`](./skills/improve-animations/SKILL.md)
 - Product-level motion composition bridge: [`skills/motion-review/SKILL.md`](./skills/motion-review/SKILL.md)
 - Strict animation code review: [`skills/review-animations/SKILL.md`](./skills/review-animations/SKILL.md)
 
@@ -184,6 +193,10 @@ Recommended next files:
 
 - Keep the existing visual dials and choose a motion tier per surface: `micro`, `system`, or `signature`.
 - Route public React Bits component sourcing through [`skills/react-bits/SKILL.md`](./skills/react-bits/SKILL.md).
+- Prefer the local pinned catalog and inspect the materialized source before using an external public registry path.
+- Treat component choice as a product decision: return the normalized brief, recommendation, rejected alternatives, and static fallback.
+- Keep catalogs lazy: load compact metadata first, then only the selected source files.
+- Use [`skills/find-animation-opportunities/SKILL.md`](./skills/find-animation-opportunities/SKILL.md) to decide where motion earns its place, and [`skills/improve-animations/SKILL.md`](./skills/improve-animations/SKILL.md) to audit existing motion and produce plans.
 - Run [`skills/motion-review/SKILL.md`](./skills/motion-review/SKILL.md) for product-level composition before handoff.
 - Run [`skills/review-animations/SKILL.md`](./skills/review-animations/SKILL.md) when animation code changes.
 - Do not claim that React Bits runtime source or Pro material is present unless the project actually provides it.

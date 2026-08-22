@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "purpose": "Choose the smallest React Bits implementation that earns a product job, then explain rejected alternatives.",
+  "defaults": {
+    "maxRecommendations": 2,
+    "maxSignatureRecommendations": 1,
+    "rejectHighFrequencyMotion": true,
+    "requireStaticFallback": true
+  },
+  "components": [
+    {
+      "variant": "AnimatedList-TS-CSS",
+      "title": "AnimatedList",
+      "jobs": ["reveal", "state"],
+      "surfaces": ["results", "feed", "empty-to-active"],
+      "interactions": ["viewport-entry", "scroll"],
+      "frequencies": ["occasional", "rare"],
+      "motionTier": "system",
+      "dependency": "motion@^12.23.12",
+      "bestFor": "A low-frequency list of new results or items entering a visible surface.",
+      "selectionNote": "A hero needs a product promise, not a list reveal.",
+      "avoidWhen": [
+        "command palette or keyboard-first navigation",
+        "live logs or data that changes continuously",
+        "the user must scan many rows without movement"
+      ],
+      "fallback": "Render the list in its final order with a selected or newly-added state.",
+      "source": "catalog/components/AnimatedList-TS-CSS/"
+    },
+    {
+      "variant": "BlurText-TS-CSS",
+      "title": "BlurText",
+      "jobs": ["reveal", "explanation"],
+      "surfaces": ["homepage-hero", "onboarding", "result-detail", "empty-state"],
+      "interactions": ["viewport-entry", "content-load"],
+      "frequencies": ["rare", "first-time"],
+      "motionTier": "signature",
+      "dependency": "motion@^12.23.12",
+      "bestFor": "A short headline or capability statement that should resolve as the first-view story becomes legible.",
+      "selectionNote": "Use for a short first-view promise, not for long-form reading.",
+      "avoidWhen": [
+        "dense operational UI",
+        "long-form reading",
+        "the text must be available immediately for rapid scanning"
+      ],
+      "fallback": "Render the headline crisply with no staged blur or delay.",
+      "source": "catalog/components/BlurText-TS-CSS/"
+    },
+    {
+      "variant": "CountUp-JS-CSS",
+      "title": "CountUp",
+      "jobs": ["feedback", "state", "metric-emphasis"],
+      "surfaces": ["success", "result-detail", "marketing-proof"],
+      "interactions": ["content-load", "state-change"],
+      "frequencies": ["rare", "first-time"],
+      "motionTier": "micro",
+      "dependency": "motion@^12.23.12",
+      "bestFor": "A meaningful, infrequent number changing as part of a result or success moment.",
+      "selectionNote": "Without a meaningful proof metric, the counter would be decorative.",
+      "avoidWhen": [
+        "live dashboards or frequently refreshing metrics",
+        "financial or scientific values users must read exactly",
+        "a number is decorative and has no state-change meaning"
+      ],
+      "fallback": "Show the final value immediately and use a semantic status label.",
+      "source": "catalog/components/CountUp-JS-CSS/"
+    },
+    {
+      "variant": "FlowingMenu-JS-CSS",
+      "title": "FlowingMenu",
+      "jobs": ["navigation", "showcase"],
+      "surfaces": ["homepage-hero", "landing-navigation", "portfolio"],
+      "interactions": ["pointer-hover", "focus-within"],
+      "frequencies": ["occasional", "rare"],
+      "motionTier": "signature",
+      "dependency": "gsap@^3.13.0",
+      "bestFor": "An authored, low-frequency navigation or showcase moment where movement explains a visual relationship.",
+      "selectionNote": "It would spend the viewport's signature budget on navigation movement.",
+      "avoidWhen": [
+        "primary product navigation used many times per day",
+        "keyboard-first workflows",
+        "small screens where the moving preview competes with labels"
+      ],
+      "fallback": "Use a static navigation list with clear active and focus states.",
+      "source": "catalog/components/FlowingMenu-JS-CSS/"
+    },
+    {
+      "variant": "SpotlightCard-JS-CSS",
+      "title": "SpotlightCard",
+      "jobs": ["focus", "showcase"],
+      "surfaces": ["homepage-hero", "feature-proof", "portfolio"],
+      "interactions": ["pointer-hover", "focus-within"],
+      "frequencies": ["occasional", "rare"],
+      "motionTier": "micro",
+      "dependency": "none",
+      "bestFor": "A secondary proof, capability, or media card that benefits from quiet pointer-led focus.",
+      "selectionNote": "Use as a supporting focus treatment, with a static touch fallback.",
+      "avoidWhen": [
+        "the card is the primary CTA and must stay visually calm",
+        "touch-first interaction with no hover equivalent",
+        "dense tables, logs, or settings"
+      ],
+      "fallback": "Use a static surface with border, focus ring, and clear hierarchy.",
+      "source": "catalog/components/SpotlightCard-JS-CSS/"
+    },
+    {
+      "variant": "TiltedCard-JS-TW",
+      "title": "TiltedCard",
+      "jobs": ["media", "showcase", "focus"],
+      "surfaces": ["homepage-hero", "product-showcase", "portfolio"],
+      "interactions": ["pointer-hover"],
+      "frequencies": ["rare", "first-time"],
+      "motionTier": "signature",
+      "dependency": "motion@^12.23.12",
+      "bestFor": "A visual object or product preview where spatial depth is part of the story.",
+      "selectionNote": "It needs a meaningful visual object and a pointer-friendly surface.",
+      "avoidWhen": [
+        "the surface is touch-first or accessibility-critical",
+        "the image is secondary to a text explanation",
+        "the product needs a calm, information-dense workspace"
+      ],
+      "fallback": "Show the media at rest with an optional static caption or overlay.",
+      "source": "catalog/components/TiltedCard-JS-TW/"
+    }
+  ],
+  "exampleBriefs": [
+    {
+      "name": "ai-product-homepage-hero",
+      "brief": {
+        "surface": "homepage-hero",
+        "jobs": ["reveal", "showcase"],
+        "frequency": "rare",
+        "interaction": "viewport-entry",
+        "contentRole": "headline-and-proof",
+        "constraints": ["keep-headline-scannable", "touch-compatible"]
+      },
+      "recommend": ["BlurText-TS-CSS", "SpotlightCard-JS-CSS"],
+      "why": [
+        "BlurText gives the short product promise a single first-view reveal.",
+        "SpotlightCard gives a secondary proof or capability card quiet focus without adding another signature animation."
+      ],
+      "reject": {
+        "AnimatedList-TS-CSS": "The hero is not a result list; staggered rows would compete with the product promise.",
+        "CountUp-JS-CSS": "A metric is not the primary story unless the brief contains a meaningful proof number.",
+        "FlowingMenu-JS-CSS": "A moving navigation is a stronger signature and would steal attention from the hero message.",
+        "TiltedCard-JS-TW": "Pointer tilt is less touch-compatible and is unnecessary when the hero has no visual object to inspect."
+      }
+    }
+  ]
+}

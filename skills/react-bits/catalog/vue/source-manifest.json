@@ -1,0 +1,10 @@
+{
+  "upstream": "https://github.com/DavidHDev/vue-bits",
+  "commit": "05668fee962070e4edc4c4fbfed53893d7987d6d",
+  "snapshotDate": "2026-08-04",
+  "registry": "registry.json",
+  "variants": [
+    "BlurText",
+    "SpotlightCard"
+  ]
+}
