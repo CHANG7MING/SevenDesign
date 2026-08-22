@@ -7,6 +7,12 @@ description: Use when a React interface needs a public React Bits component or R
 
 React Bits is SevenDesign's public component and motion implementation layer. This repository now carries a pinned public catalog snapshot plus a small set of reusable public component sources under [`catalog/`](./catalog/); it is no longer only an external reference. React Bits still does not replace product hierarchy, semantic tokens, scenario constraints, or upstream motion craft.
 
+## Route through Component Intelligence
+
+When the user describes a product surface without naming a library, start with [`../component-intelligence/SKILL.md`](../component-intelligence/SKILL.md). It decides whether React Bits should own the expression layer at all, and whether shadcn/ui, Radix UI, Vue Bits, or the host system should own other layers. Load this skill after that decision, or when the user explicitly asks for React Bits / Vue Bits.
+
+Do not turn this skill into a component-library shopping list. A React Bits recommendation must remain subordinate to the product job, density, framework, accessibility, and token system.
+
 ## Selection before implementation
 
 Use [`references/selection-protocol.md`](./references/selection-protocol.md) whenever a user asks for a component, a hero effect, or a comparison between visual treatments. The job is to make a defensible choice, not to enumerate the catalog.

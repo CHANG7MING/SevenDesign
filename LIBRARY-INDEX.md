@@ -13,7 +13,7 @@ Use it as the quickest entry point when deciding what to apply to a new product 
 3. Pick a starter kit from [`starter-kits/`](./starter-kits)
 4. Use prompts from [`prompt-packs/`](./prompt-packs) or code from [`examples/`](./examples)
 5. Read [`DESIGN.md`](./DESIGN.md) and [`TOKENS.md`](./TOKENS.md) when you need deeper control
-6. Blend in one context skill, the optional [`react-bits`](./skills/react-bits/SKILL.md) extension, and only the references required by the task
+6. Run [`component-intelligence`](./skills/component-intelligence/SKILL.md) to choose foundation, behavior, and expression ownership; load [`react-bits`](./skills/react-bits/SKILL.md) only when Bits is selected
 7. Run the product-level and code-level motion review that applies
 
 ## Fastest Entry Points
@@ -53,6 +53,9 @@ See [`skills/UPSTREAM-SOURCE.md`](./skills/UPSTREAM-SOURCE.md) for provenance an
 
 ### React Bits extension layer
 
+- [`skills/component-intelligence/SKILL.md`](./skills/component-intelligence/SKILL.md) — source-neutral component decision layer
+- [`skills/component-intelligence/catalog/source-matrix.json`](./skills/component-intelligence/catalog/source-matrix.json) — compact cross-library ownership matrix
+- [`skills/component-intelligence/scripts/select-source.py`](./skills/component-intelligence/scripts/select-source.py) — low-context deterministic source selector
 - Public component and motion integration: [`skills/react-bits/SKILL.md`](./skills/react-bits/SKILL.md)
 - Intelligent component selection protocol: [`skills/react-bits/references/selection-protocol.md`](./skills/react-bits/references/selection-protocol.md)
 - React-default / Vue-secondary framework routing: [`skills/react-bits/references/framework-selection.md`](./skills/react-bits/references/framework-selection.md)
@@ -189,10 +192,19 @@ Recommended next files:
 - `components/sidebar-nav.md`
 - `components/hero-media-stage.md`
 
+## Component Intelligence
+
+- Start with the product job, not a component library name.
+- Resolve React by default; choose Vue only when the user says Vue / Nuxt, the host project establishes Vue, or one clarification resolves the ambiguity.
+- Assign foundation, behavior, and expression separately. `shadcn`, `Radix`, Bits, and the host system are composable ownership layers.
+- Reject expressive Bits motion for dense, high-frequency data surfaces unless it explains a real state or relationship.
+- Return the normalized brief, ownership plan, rejected alternatives, static fallback, provenance, dependencies, and review path.
+- Keep the local matrix as the default context and use narrow registry search only after the product decision.
+
 ## Motion System
 
 - Keep the existing visual dials and choose a motion tier per surface: `micro`, `system`, or `signature`.
-- Route public React Bits component sourcing through [`skills/react-bits/SKILL.md`](./skills/react-bits/SKILL.md).
+- Route public React Bits component sourcing through [`skills/react-bits/SKILL.md`](./skills/react-bits/SKILL.md) only after the expression decision.
 - Prefer the local pinned catalog and inspect the materialized source before using an external public registry path.
 - Treat component choice as a product decision: return the normalized brief, recommendation, rejected alternatives, and static fallback.
 - Keep catalogs lazy: load compact metadata first, then only the selected source files.

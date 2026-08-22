@@ -1,0 +1,4 @@
+interface:
+  display_name: "Component Intelligence"
+  short_description: "Choose component sources from product intent"
+  default_prompt: "Use $component-intelligence to choose the right component source and ownership plan for this product surface."

@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "defaultFramework": "react",
+  "layers": ["foundation", "behavior", "expression"],
+  "sources": {
+    "shadcn": {
+      "label": "shadcn/ui",
+      "frameworks": ["react"],
+      "layer": "foundation",
+      "localEvidence": [
+        "implementation/COMPONENT-MAPPING.md",
+        "examples/components.json",
+        "components/"
+      ],
+      "owns": ["buttons", "inputs", "cards", "tabs", "settings-shells", "auth-surfaces"],
+      "bestWhen": ["token ownership", "styled product UI", "reusable surface primitives"],
+      "avoidWhen": ["unstyled behavior primitive is the only need"]
+    },
+    "radix": {
+      "label": "Radix UI",
+      "frameworks": ["react"],
+      "layer": "behavior",
+      "localEvidence": [
+        "implementation/COMPONENT-MAPPING.md",
+        "components/command-palette.md"
+      ],
+      "owns": ["dialogs", "popovers", "dropdowns", "tooltips", "switches", "focus-management"],
+      "bestWhen": ["keyboard access", "overlay state", "focus management", "composable behavior"],
+      "avoidWhen": ["complete visual surface is needed without a styling layer"]
+    },
+    "react-bits": {
+      "label": "React Bits",
+      "frameworks": ["react"],
+      "layer": "expression",
+      "localEvidence": [
+        "skills/react-bits/SKILL.md",
+        "skills/react-bits/catalog/selection-matrix.json"
+      ],
+      "owns": ["reveal", "showcase", "focus", "media", "rare-delight"],
+      "bestWhen": ["rare first-view reveal", "product showcase", "meaningful visual focus"],
+      "avoidWhen": ["dense data scanning", "100-plus-per-day actions", "decorative motion"]
+    },
+    "vue-bits": {
+      "label": "Vue Bits",
+      "frameworks": ["vue"],
+      "layer": "expression",
+      "localEvidence": [
+        "skills/react-bits/catalog/vue/README.md",
+        "skills/react-bits/catalog/vue/source-manifest.json"
+      ],
+      "owns": ["reveal", "showcase", "focus", "media", "rare-delight"],
+      "bestWhen": ["Vue or Nuxt host", "rare first-view reveal", "product showcase"],
+      "avoidWhen": ["React host", "dense data scanning", "decorative motion"]
+    },
+    "host-system": {
+      "label": "Existing host system",
+      "frameworks": ["react", "vue"],
+      "layer": "foundation",
+      "localEvidence": ["existing host project"],
+      "owns": ["project-specific primitives", "existing tokens", "legacy compatibility"],
+      "bestWhen": ["already installed", "matches the product's existing language", "avoids duplicate dependencies"],
+      "avoidWhen": ["inconsistent styling", "missing keyboard or focus behavior"]
+    }
+  },
+  "archetypes": {
+    "ai-saas-hero": {
+      "aliases": ["ai product homepage hero", "ai saas hero", "ai workspace landing"],
+      "density": "sparse",
+      "defaultLayers": {
+        "foundation": {
+          "source": "shadcn",
+          "fallback": "host-system",
+          "reason": "Own the hero shell, CTA, cards, and tokens with a stable styled foundation."
+        },
+        "behavior": {
+          "source": "radix",
+          "when": "Only if the hero includes a dialog, popover, menu, or focus-sensitive control.",
+          "fallback": "host-system"
+        },
+        "expression": {
+          "sourceByFramework": {
+            "react": "react-bits",
+            "vue": "vue-bits"
+          },
+          "candidates": {
+            "react": ["BlurText-TS-CSS", "SpotlightCard-JS-CSS"],
+            "vue": ["BlurText", "SpotlightCard"]
+          },
+          "reason": "Use one headline reveal and one quiet proof focus treatment, never a gallery of effects."
+        }
+      },
+      "reject": [
+        "Radix alone: it supplies behavior, not the styled hero surface.",
+        "AnimatedList: the hero promise is not a result list.",
+        "FlowingMenu: it would spend the viewport's signature budget on navigation spectacle."
+      ]
+    },
+    "data-dashboard": {
+      "aliases": ["data dashboard", "analytics dashboard", "admin dashboard", "operations console"],
+      "density": "dense",
+      "defaultLayers": {
+        "foundation": {
+          "source": "shadcn",
+          "fallback": "host-system",
+          "reason": "Keep tables, filters, cards, and states under one token and density system."
+        },
+        "behavior": {
+          "source": "radix",
+          "when": "Use for filter menus, dialogs, tooltips, switches, and keyboard-visible focus.",
+          "fallback": "host-system"
+        },
+        "expression": {
+          "source": "none",
+          "reason": "Data reading and repeated actions take priority over expressive motion."
+        }
+      },
+      "reject": [
+        "React Bits or Vue Bits as the default layer: reveal effects compete with scan speed.",
+        "TiltedCard: pointer depth does not help users compare records.",
+        "FlowingMenu: navigation spectacle slows a high-frequency workflow."
+      ]
+    },
+    "portfolio": {
+      "aliases": ["portfolio", "creative portfolio", "personal site", "case study site"],
+      "density": "sparse",
+      "defaultLayers": {
+        "foundation": {
+          "source": "shadcn",
+          "fallback": "host-system",
+          "reason": "Keep navigation, buttons, cards, and case-study scaffolding consistent."
+        },
+        "behavior": {
+          "source": "radix",
+          "when": "Use only where the site has overlays, menus, or keyboard-sensitive interaction.",
+          "fallback": "none"
+        },
+        "expression": {
+          "sourceByFramework": {
+            "react": "react-bits",
+            "vue": "vue-bits"
+          },
+          "candidates": {
+            "react": ["SpotlightCard-JS-CSS", "TiltedCard-JS-TW", "FlowingMenu-JS-CSS"],
+            "vue": ["SpotlightCard"]
+          },
+          "reason": "A portfolio can spend more delight budget on one authored media or showcase moment."
+        }
+      },
+      "reject": [
+        "Radix as the visual layer: primitives need a product surface around them.",
+        "CountUp without a meaningful proof metric: it becomes decorative.",
+        "Multiple signature effects in one viewport: the work loses authorship and hierarchy."
+      ]
+    }
+  }
+}

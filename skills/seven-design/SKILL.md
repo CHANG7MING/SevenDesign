@@ -14,8 +14,9 @@ description: Use when an AI agent or frontend team needs to design, build, polis
 1. `DESIGN.md`：产品语气、信息层级、布局和视觉原则。
 2. `TOKENS.md`：颜色、字体、间距、层级和动效 token。
 3. `skills/design-core/SKILL.md`：检查 → 定向 → 构建 → 验证的主循环。
-4. 一个与任务匹配的工艺 Skill 和上下文 Skill。
-5. 只有存在明确产品任务时，才加入 `skills/react-bits/SKILL.md`。
+4. `skills/component-intelligence/SKILL.md`：先按产品任务选择 foundation、behavior 和 expression 的来源。
+5. 一个与任务匹配的工艺 Skill 和上下文 Skill。
+6. 只有 Component Intelligence 选中 Bits 表达层时，才加入 `skills/react-bits/SKILL.md`。
 
 如果只安装了本入口而没有安装仓库其他 Skill，仍执行产品目标、状态设计、响应式和验收流程；不要假设缺失的配套 Skill 已经可用。
 
@@ -23,20 +24,20 @@ description: Use when an AI agent or frontend team needs to design, build, polis
 
 | 任务 | 首选 Skill | 需要时再加入 |
 | --- | --- | --- |
-| 通用产品界面、组件和前端实现 | `design-core` | `emil-design-eng`、`apple-design`、`react-bits` |
-| 个人网站、作品集、发布型首页 | `design-core` + `apple-design` | `luxe-landing`、`animation-vocabulary`、`react-bits` |
-| AI 对话、智能体工作区、多模态工具 | `design-core` + `ai-native` | `apple-design`、`react-bits`、`review-animations` |
-| API 平台、基础设施、技术仪表盘 | `design-core` + `devtool-pro` | `apple-design`、`react-bits`、`review-animations` |
-| 文档、帮助中心、引导、定价 | `design-core` + `docs-pricing` | `react-bits`、`review-animations` |
-| 高端发布页、硬件展示、汽车或性能产品 | `design-core` + `luxe-landing` | `apple-design`、`emil-design-eng`、`react-bits` |
-| React Bits / Vue Bits 智能选型与接入 | `react-bits` | `design-core`、场景 Skill、`motion-review` |
+| 通用产品界面、组件和前端实现 | `design-core` + `component-intelligence` | `emil-design-eng`、`apple-design` |
+| 个人网站、作品集、发布型首页 | `design-core` + `component-intelligence` | `apple-design`、`luxe-landing`、`animation-vocabulary` |
+| AI 对话、智能体工作区、多模态工具 | `design-core` + `component-intelligence` | `ai-native`、`apple-design`、`review-animations` |
+| API 平台、基础设施、技术仪表盘 | `design-core` + `component-intelligence` | `devtool-pro`、`apple-design`、`review-animations` |
+| 文档、帮助中心、引导、定价 | `design-core` + `component-intelligence` | `docs-pricing`、`review-animations` |
+| 高端发布页、硬件展示、汽车或性能产品 | `design-core` + `component-intelligence` | `luxe-landing`、`apple-design`、`emil-design-eng` |
+| 用户明确指定 React Bits / Vue Bits | `component-intelligence` | `react-bits`、`design-core`、场景 Skill |
 | 查找值得加入动画的界面位置 | `find-animation-opportunities` | `react-bits`、`motion-review` |
 | 审计现有动效并生成改进计划 | `improve-animations` | `review-animations`、`motion-review` |
 | 动效设计或动效复审 | `animation-vocabulary` 或 `motion-review` | `apple-design`、`review-animations` |
 | 动效代码严格复审 | `review-animations` | `design-core/references/interaction-motion.md` |
 | 需要独立证据、边界实现或全新复审的较大任务 | `team-mode` | 按任务加载上述 Skill |
 
-React Bits 是公开组件与动效实现扩展，不能覆盖产品层级、场景 Skill 的密度约束或上游动效质量标准。它只有在组件有明确的 reveal、focus、feedback、navigation、state、media 或 showcase 职责时才加入。
+Component Intelligence 是 SevenDesign 的统一组件决策层。Agent 不应要求用户先选组件库，而应先识别产品任务，再在宿主系统、shadcn/ui、Radix UI、React Bits 和 Vue Bits 之间分配 foundation、behavior 与 expression 的归属。React Bits 是其中的公开表达层实现，不能覆盖产品层级、场景 Skill 的密度约束或上游动效质量标准；它只有在组件有明确的 reveal、focus、feedback、navigation、state、media 或 showcase 职责时才加入。
 
 ## 工作协议
 
@@ -47,12 +48,24 @@ React Bits 是公开组件与动效实现扩展，不能覆盖产品层级、场
 - Reviewer 从稳定产物和新上下文开始，聚焦一个未解决风险；它不编辑、不格式化、不提交，也不重复已经通过的检查。
 - 如果运行时没有实际提供角色选择、模型和沙箱证据，只把 Explorer / Executor / Reviewer 当作协作标签，不宣称隔离已经生效。
 
+## Component Intelligence 协议
+
+当用户说“做一个 AI SaaS Hero”“做数据 Dashboard”“做作品集”，但没有指定组件库时：
+
+1. 先加载 [`skills/component-intelligence/SKILL.md`](../component-intelligence/SKILL.md)，把请求归一化为产品 archetype、用户 job、密度、频率、交互和 framework。
+2. 运行 [`skills/component-intelligence/scripts/select-source.py`](../component-intelligence/scripts/select-source.py) 或使用 [`skills/component-intelligence/catalog/source-matrix.json`](../component-intelligence/catalog/source-matrix.json) 做第一轮来源分层。
+3. 让 foundation、behavior、expression 分别拥有清晰职责；shadcn、Radix、Bits 和宿主系统可以组合，不把它们当成互斥库。
+4. 输出选择理由、拒绝的来源 / 效果、静态 fallback、依赖、token 归属和验证路径。
+5. 只有表达层实际选择 React Bits 或 Vue Bits 时，才进入下面的 React Bits 接入协议。
+
+默认流程保持低 token：先读紧凑矩阵，再用窄查询检索 registry，最多保留 8 个结果，最后只读取选中的源码。不要默认加载完整 registry、`llms.txt` 或无关组件 JSON。
+
 ## React Bits 接入协议
 
-当任务命中 React Bits 路由时：
+当 Component Intelligence 选中 React Bits / Vue Bits 表达层，或用户明确要求 Bits 时：
 
 1. 先从 `design-core/references/interaction-motion.md` 读取 SevenDesign 动效基准。
-2. 先把请求归一化为 `surface`、`jobs`、`frequency`、`interaction`、`contentRole` 和 `constraints`。
+2. 先使用 Component Intelligence 已归一化的 `surface`、`jobs`、`frequency`、`interaction`、`contentRole` 和 `constraints`，不要重新从组件名称开始。
 3. 读取 `skills/react-bits/references/framework-selection.md`，通过用户对话或宿主项目证据解析 React / Vue；未指定时默认 React。
 4. 读取 `skills/react-bits/references/selection-protocol.md` 和 `catalog/selection-matrix.json`，给出最多两个候选。
 5. 明确写出每个候选为什么适合，并至少解释两个合理替代项为什么不选。

@@ -10,7 +10,8 @@
 <p align="center">
   <a href="./skills/seven-design/SKILL.md">主入口</a> ·
   <a href="./USAGE.md">使用指南</a> ·
-  <a href="./skills/react-bits/SKILL.md">React Bits</a> ·
+  <a href="./skills/component-intelligence/SKILL.md">Component Intelligence</a> ·
+  <a href="./skills/react-bits/SKILL.md">React Bits / Vue Bits</a> ·
   <a href="./skills/team-mode/SKILL.md">团队模式</a> ·
   <a href="./DESIGN.md">设计系统</a>
 </p>
@@ -24,7 +25,7 @@
 
 SEVENDESIGN 是一套面向 AI 智能体与前端团队、以产品思维为核心的设计操作系统。
 
-它把松散的产品需求转化为明确的视觉方向、统一的界面系统、可解释的组件选型和可复审的实现路径，并结合 Apple 风格的流畅交互、Emil Kowalski 的动效工艺、React 默认与 Vue 可选的公开 Bits 组件，以及探索者 / 执行者 / 复审者的团队协作模型。
+它把松散的产品需求转化为明确的视觉方向、统一的界面系统、可解释的组件选型和可复审的实现路径，并结合 Apple 风格的流畅交互、Emil Kowalski 的动效工艺、React 默认与 Vue 可选的公开 Bits 组件，以及探索者 / 执行者 / 复审者的团队协作模型。组件不会再由用户先指定来源，而是由 Component Intelligence 先理解产品任务，再在宿主系统、shadcn/ui、Radix UI、React Bits 和 Vue Bits 之间分配职责。
 
 ## 安装与入口
 
@@ -36,7 +37,7 @@ SEVENDESIGN 是一套面向 AI 智能体与前端团队、以产品思维为核�
 --path skills/seven-design
 ```
 
-需要完整套件时，在同一次安装中追加需要的路径，例如 `skills/design-core`、`skills/react-bits`、`skills/apple-design`、`skills/emil-design-eng`、`skills/review-animations` 和 `skills/team-mode`。只安装总入口也能工作，但仓库内的具体配套 Skill 需要另外安装后才能被加载。
+需要完整套件时，在同一次安装中追加需要的路径，例如 `skills/design-core`、`skills/component-intelligence`、`skills/react-bits`、`skills/apple-design`、`skills/emil-design-eng`、`skills/review-animations` 和 `skills/team-mode`。只安装总入口也能工作，但仓库内的具体配套 Skill 需要另外安装后才能被加载。
 
 ## 从这里开始
 
@@ -44,8 +45,8 @@ SEVENDESIGN 是一套面向 AI 智能体与前端团队、以产品思维为核�
 
 1. 先阅读 [`skills/seven-design/SKILL.md`](./skills/seven-design/SKILL.md) 和 [`USAGE.md`](./USAGE.md)。
 2. 在 [`quickstart/CHOOSE-YOUR-STACK.md`](./quickstart/CHOOSE-YOUR-STACK.md) 中选择一条方向。
-3. 将 [`DESIGN.md`](./DESIGN.md)、[`TOKENS.md`](./TOKENS.md)、[`skills/design-core/SKILL.md`](./skills/design-core/SKILL.md) 与一个匹配的上下文技能交给智能体。
-4. 如果需要公开的 React 动效组件，再加入 [`skills/react-bits/SKILL.md`](./skills/react-bits/SKILL.md)。
+3. 将 [`DESIGN.md`](./DESIGN.md)、[`TOKENS.md`](./TOKENS.md)、[`skills/design-core/SKILL.md`](./skills/design-core/SKILL.md) 与 [`skills/component-intelligence/SKILL.md`](./skills/component-intelligence/SKILL.md) 交给智能体，再加入一个匹配的上下文技能。
+4. 只有 Component Intelligence 选中 Bits 作为表达层时，才加入 [`skills/react-bits/SKILL.md`](./skills/react-bits/SKILL.md)。
 5. 在宣布完成前，使用 [`PRE-FLIGHT-CHECKLIST.md`](./PRE-FLIGHT-CHECKLIST.md) 和对应的动效复审入口进行检查。
 
 对于较大的任务，再加入 [`skills/team-mode/SKILL.md`](./skills/team-mode/SKILL.md) 以及本地路由指南 [`skills/team-mode/references/seven-design-routing.md`](./skills/team-mode/references/seven-design-routing.md)。
@@ -82,9 +83,10 @@ flowchart LR
 | --- | --- | --- |
 | 基础 | 原则、架构、token、页面构成 | [`DESIGN.md`](./DESIGN.md) · [`TOKENS.md`](./TOKENS.md) |
 | 核心执行 | 检查 → 定向 → 构建 → 验证 | [`skills/design-core/SKILL.md`](./skills/design-core/SKILL.md) |
+| 组件智能 | 从产品任务统一选择 foundation / behavior / expression 来源 | [`skills/component-intelligence/SKILL.md`](./skills/component-intelligence/SKILL.md) |
 | 工艺 | UI 精修、组件质感、动效决策 | [`emil-design-eng`](./skills/emil-design-eng/SKILL.md) |
 | 流畅交互 | 手势、弹簧、惯性、字体、材质 | [`apple-design`](./skills/apple-design/SKILL.md) |
-| React Bits 扩展 | 公开 React 组件、表达性 reveal、状态和媒体编排 | [`react-bits`](./skills/react-bits/SKILL.md) |
+| Bits 表达层 | 经 Component Intelligence 选中的 React Bits / Vue Bits 公开组件、reveal、状态和媒体编排 | [`component-intelligence`](./skills/component-intelligence/SKILL.md) → [`react-bits`](./skills/react-bits/SKILL.md) |
 | 动效复审 | 产品级编排复审与代码级严格审查 | [`motion-review`](./skills/motion-review/SKILL.md) · [`review-animations`](./skills/review-animations/SKILL.md) |
 | 上下文 | AI、开发者工具、文档 / 定价、高端发布 | [`skills/`](./skills) |
 | 团队 | 证据、边界执行、全新复审 | [`team-mode`](./skills/team-mode/SKILL.md) |
@@ -100,9 +102,13 @@ flowchart LR
 | 发布页、硬件展示、汽车、高端产品 | [`luxe-landing`](./skills/luxe-landing/SKILL.md) |
 | 个人网站 | [`apple-design`](./skills/apple-design/SKILL.md) + [`luxe-landing`](./skills/luxe-landing/SKILL.md) |
 
-## React Bits 接入边界
+## React Bits / Vue Bits 接入边界
 
-SevenDesign 已经在 skill、设计协议和本地资源层真正接入 [React Bits](https://github.com/DavidHDev/react-bits)。仓库内包含官方公开 registry 的 pinned snapshot，以及 6 组可直接复制或适配的公开组件源码：
+SevenDesign 已经在 skill、设计协议和本地资源层真正接入 [React Bits](https://github.com/DavidHDev/react-bits) 与 [Vue Bits](https://github.com/DavidHDev/vue-bits)。两者都不是默认强行加载的组件库，而是由 [`Component Intelligence`](./skills/component-intelligence/SKILL.md) 根据产品任务决定是否进入 expression 层。React 是默认实现框架；只有用户明确使用 Vue / Nuxt，或宿主项目证据明确指向 Vue 时，才切换到 Vue Bits。
+
+### React Bits 公开资源
+
+仓库内包含官方公开 React registry 的 pinned snapshot，以及 6 组可直接复制或适配的公开组件源码：
 
 - [`AnimatedList-TS-CSS`](./skills/react-bits/catalog/components/AnimatedList-TS-CSS/)：结果或列表的低频 reveal
 - [`BlurText-TS-CSS`](./skills/react-bits/catalog/components/BlurText-TS-CSS/)：解释、结果和 onboarding reveal
@@ -111,14 +117,24 @@ SevenDesign 已经在 skill、设计协议和本地资源层真正接入 [React 
 - [`SpotlightCard-JS-CSS`](./skills/react-bits/catalog/components/SpotlightCard-JS-CSS/)：低频 showcase 卡片的 pointer focus
 - [`TiltedCard-JS-TW`](./skills/react-bits/catalog/components/TiltedCard-JS-TW/)：产品或媒体 showcase
 
-先按 [`skills/react-bits/references/framework-selection.md`](./skills/react-bits/references/framework-selection.md) 解析 React 或 Vue，再按 [`skills/react-bits/references/selection-protocol.md`](./skills/react-bits/references/selection-protocol.md) 把需求归一化为产品任务。未指定框架时默认 React；如果用户或宿主项目明确使用 Vue / Nuxt，再切换到 Vue Bits。之后查对应的本地 catalog 与 registry，读取真实源码，再复制到宿主项目并做 token、依赖、响应式和 reduced-motion 适配。catalog 是 Skill 的公开资源层，不是 SevenDesign 的 runtime dependency，也不能直接从宿主项目 import。
+### Vue Bits 公开资源
 
-接入时遵循四条边界：
+Vue Bits 当前是 selective public snapshot，不是完整源码镜像。仓库内已整理 2 组可直接复制或适配的 Vue 组件源码：
+
+- [`BlurText`](./skills/react-bits/catalog/vue/components/BlurText/)：短标题或能力说明 reveal，依赖 `motion-v`
+- [`SpotlightCard`](./skills/react-bits/catalog/vue/components/SpotlightCard/)：次级证明或 showcase focus，无额外依赖
+
+Vue 的资源入口见 [`skills/react-bits/catalog/vue/README.md`](./skills/react-bits/catalog/vue/README.md) 和 [`source-manifest.json`](./skills/react-bits/catalog/vue/source-manifest.json)。Vue Bits 源码只在 framework 已解析为 Vue / Nuxt 后使用，不把 React 源码静默移植成 Vue；本地 registry 中存在的其他条目也不代表已经被 materialize。
+
+先按 [`skills/component-intelligence/SKILL.md`](./skills/component-intelligence/SKILL.md) 解析产品任务和来源职责，再按 [`skills/react-bits/references/framework-selection.md`](./skills/react-bits/references/framework-selection.md) 解析 React 或 Vue。之后只读取 resolved framework 对应的 catalog、registry 和真实源码，再复制到宿主项目并做 token、依赖、响应式和 reduced-motion 适配。catalog 是 Skill 的公开资源层，不是 SevenDesign 的 runtime dependency，也不能直接从宿主项目 import。
+
+接入时遵循五条边界：
 
 1. 先写产品任务，再选组件；没有明确任务就不引入动效。
-2. 优先使用本地 pinned public catalog；未内置的组件再按官方 public registry 记录公开安装路径，并映射到本项目的 token、字体、间距、焦点和状态。
-3. 使用 `micro`、`system`、`signature` 三档动效预算；默认每个 viewport 只保留一个 signature 动效。
-4. Pro 如果无法合法获得，只参考公开可见的分类、构图和工作流，不复制收费源码、私有素材或 gated template，也不声称本地已经安装了 Pro。
+2. 先判断 Bits 是否真的适合表达层；shadcn/ui、Radix UI 与宿主系统仍可分别承担基础层和行为层。
+3. 优先使用本地 pinned public catalog；未内置的组件再按官方 public registry 记录公开安装路径，并映射到本项目的 token、字体、间距、焦点和状态。
+4. 使用 `micro`、`system`、`signature` 三档动效预算；默认每个 viewport 只保留一个 signature 动效。
+5. Pro 如果无法合法获得，只参考公开可见的分类、构图和工作流，不复制收费源码、私有素材或 gated template，也不声称本地已经安装了 Pro。
 
 来源、commit、license 和刷新边界见 [`skills/react-bits/UPSTREAM.md`](./skills/react-bits/UPSTREAM.md)、[`skills/react-bits/REACT-BITS-LICENSE.md`](./skills/react-bits/REACT-BITS-LICENSE.md)、[`skills/react-bits/VUE-BITS-LICENSE.md`](./skills/react-bits/VUE-BITS-LICENSE.md) 和 [`skills/react-bits/catalog/frameworks.json`](./skills/react-bits/catalog/frameworks.json)。Token 控制规则见 [`skills/react-bits/references/token-budget.md`](./skills/react-bits/references/token-budget.md)：默认只读紧凑矩阵和命中的源码，不整份加载 registry 或 `llms.txt`。产品级编排使用 [`skills/motion-review/SKILL.md`](./skills/motion-review/SKILL.md)，需要寻找动画机会时使用 [`skills/find-animation-opportunities/SKILL.md`](./skills/find-animation-opportunities/SKILL.md)，审计现有动效时使用 [`skills/improve-animations/SKILL.md`](./skills/improve-animations/SKILL.md)，动效代码级严格复审使用 [`skills/review-animations/SKILL.md`](./skills/review-animations/SKILL.md)。
 
@@ -139,6 +155,7 @@ SEVENDESIGN 完整引入了 [`attentiondotnet/emilkowalski_skills`](https://gith
 - Apple、Linear、Notion、Stripe、Supabase、Vercel、Tesla 和 Runway 的品牌参考。
 - 发布页、仪表盘、AI 工作区、文档、定价页、框架首页等页面原型。
 - 可复用的组件配方，以及 Tailwind / shadcn / Radix 示例。
+- Component Intelligence 跨来源选型层：基于产品任务在宿主系统、shadcn/ui、Radix UI、React Bits 和 Vue Bits 之间做 foundation / behavior / expression 分工。
 - React Bits / Vue Bits 官方公开 registry 快照、基于产品任务与框架的智能选型协议、React 默认与 Vue 可选的公开组件源码、组件 provenance、动效分级、token 适配和 Pro 边界。
 - React Bits 官方的动画机会发现与动效改进审计 Skill。
 - 一套包含调度包、单写入者归属、全新复审、运行时就绪门槛和失败恢复的团队模式路由契约。
@@ -147,12 +164,12 @@ SEVENDESIGN 完整引入了 [`attentiondotnet/emilkowalski_skills`](https://gith
 ## 可直接使用的提示词
 
 ```text
-请为此任务使用 $seven-design、$team-mode 和 $design-core。
+请为此任务使用 $seven-design、$component-intelligence、$team-mode 和 $design-core。
 
 为技术团队构建一个响应式 AI 工作区。
 使用 $ai-native 处理产品状态，使用 $emil-design-eng 处理 UI 工艺，
 使用 $apple-design 处理面板、手势和可中断动效。
-只有在某个公开 React Bits 组件能承担明确的 reveal、state、media
+先让 Component Intelligence 判断 foundation、behavior、expression 的来源。只有在某个公开 React Bits 组件能承担明确的 reveal、state、media
 或 showcase 任务时，才使用 $react-bits；最后用 $review-animations
 复审动效代码。
 

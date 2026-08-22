@@ -16,6 +16,10 @@ Run this checklist before considering a design output complete.
 
 ## 3. Component Discipline
 
+- Was the product brief routed through [`skills/component-intelligence/SKILL.md`](./skills/component-intelligence/SKILL.md) before choosing a library?
+- Does the handoff record separate foundation, behavior, and expression ownership?
+- Were shadcn/ui, Radix UI, React Bits, Vue Bits, and the host system considered by responsibility rather than treated as mutually exclusive libraries?
+- If no expression layer was selected, is that intentional and explained by the product job or density?
 - If multiple component systems are used, are they visually normalized?
 - Are `shadcn/ui`, `radix ui`, React Bits, and any dense components aligned under one token system?
 - Are stock third-party styles removed or restyled?
